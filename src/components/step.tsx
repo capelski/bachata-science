@@ -1,6 +1,11 @@
 import React from 'react';
 
-export const Step = props => (
+export interface StepProps {
+    name: string;
+    description?: string;
+}
+
+export const Step = (props: StepProps) => (
     <div className="step">
         <h3>{props.name}</h3>
         <div className="thumbnail">🎥💃</div>
