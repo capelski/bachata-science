@@ -4,39 +4,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		<style>
-			.phase {
+			.all-steps {
 				display: flex;
 				flex-wrap: wrap;
 				margin-bottom: 30px;
 			}
 
-			.phase .step {
-				flex: 1 0 100%;
+			.all-steps .step {
+				flex: 0 0 100%;
 				padding: 10px;
 				box-sizing: border-box;
 			}
 
 			@media(min-width: 768px) {
-				.phase .step {
-					flex: 1 0 50%;
+				.all-steps .step {
+					flex: 0 0 50%;
 				}
 			}
 
 			@media(min-width: 992px) {
-				.phase .step {
-					flex: 1 0 25%;
+				.all-steps .step {
+					flex: 0 0 25%;
 				}
 			}
 
-			.phase .step:nth-child(4n + 1) {
+			.all-steps .step:nth-child(4n + 1) {
 				padding-left: 0;
 			}
 
-			.phase .step:nth-child(4n) {
+			.all-steps .step:nth-child(4n) {
 				padding-right: 0;
 			}
 
-			.phase .step .thumbnail {
+			.all-steps .step .thumbnail {
 				border: 1px solid black;
 				font-size: 30px;
 				height: 100px;
@@ -48,239 +48,6 @@
 	</head>
 	<body>
 		<div id="app-placeholder"></div>
-		<h1>Bachata Science</h1>
-
-		<p>Esta página pretende ser un catalogo de los pasos mas comunes de bachata, para aprender como se hacen, enseñarlos y sobretodo, establecer un nombre único para cada uno.</p>
-		
-		<p>Puede que los nombres no te gusten (acepto sugerencias mejores) o que eches de menos tu paso preferido (en cuyo caso, escríbeme a <b>capellas.carles@gmail.com</b> explicando como se hace y lo añadire).</p>
-
-		<p>Verás que utilizo términos inventados para definir los pasos; tal vez te ayude echar un vistazo al <a href="#glosario">glosario</a></p>
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Basico lateral</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Basico frontal</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Basico en el sitio</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Doble tiempo</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>	
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Cuadrado</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Giro en el sitio</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Paso y pico</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Slide</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Vuelta de reloj</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Vuelta de barriga</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Vuelta de hombro</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Vuelta con cambio de mano</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Enrosque de cintura</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Desnrosque de cintura</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Caminar enroscado</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Alternar enrosque</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Mano al hombro</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Salida de mano al hombro</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Caminar con mano al hombro</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Alternar mano al hombro</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Vuelta de brazos cruzados</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Bufanda</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Lanzar brazos</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Vuelta de baldufa</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Vuelta de trazo</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Peinado follower</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Flecha</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Vuelta doble sin soltar</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Onda en doble tiempo</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Onda con sentadilla</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Onda frontal</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<!-- TODO agrupar en otro sitio -->
-				<h3>Basico madrid</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Boomerang</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Abrebotellas</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Catapulta</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Tornado</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>
-		
-		<div class="phase">
-			<div class="step">
-				<h3>Molinillo</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Enrosque de cuello</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-			<div class="step">
-				<h3>Vuelta con finta</h3>
-				<div class="thumbnail">🎥💃</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...</p>
-			</div>
-		</div>
 
 		<div id="glosario">
 			<h2>Glosario</h2>
