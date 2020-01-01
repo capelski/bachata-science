@@ -14,7 +14,7 @@
 			.positions-list .position-preview,
 			.steps-list .step-preview {
 				flex: 0 0 100%;
-				padding: 10px;
+				padding: 10px 0;
 				box-sizing: border-box;
 			}
 
@@ -22,6 +22,17 @@
 				.positions-list .position-preview,
 				.steps-list .step-preview {
 					flex: 0 0 50%;
+					padding: 10px;
+				}
+
+				.positions-list .position-preview:nth-child(2n + 1),
+				.steps-list .step-preview:nth-child(2n + 1) {
+					padding-left: 0;
+				}
+
+				.positions-list .position-preview:nth-child(2n),
+				.steps-list .step-preview:nth-child(2n)  {
+					padding-right: 0;
 				}
 			}
 
@@ -30,16 +41,26 @@
 				.steps-list .step-preview {
 					flex: 0 0 25%;
 				}
-			}
 
-			.positions-list .position-preview:nth-child(4n + 1),
-			.steps-list .step-preview:nth-child(4n + 1) {
-				padding-left: 0;
-			}
+				.positions-list .position-preview:nth-child(2n + 1),
+				.steps-list .step-preview:nth-child(2n + 1) {
+					padding-left: 10px;
+				}
 
-			.positions-list .position-preview:nth-child(4n),
-			.steps-list .step-preview:nth-child(4n)  {
-				padding-right: 0;
+				.positions-list .position-preview:nth-child(2n),
+				.steps-list .step-preview:nth-child(2n)  {
+					padding-right: 10px;
+				}
+
+				.positions-list .position-preview:nth-child(4n + 1),
+				.steps-list .step-preview:nth-child(4n + 1) {
+					padding-left: 0;
+				}
+
+				.positions-list .position-preview:nth-child(4n),
+				.steps-list .step-preview:nth-child(4n)  {
+					padding-right: 0;
+				}
 			}
 
 			.thumbnail {
@@ -54,5 +75,6 @@
 	</head>
 	<body>
 		<div id="app-placeholder"></div>
+		<script type="text/javascript" src="/main.js"></script>
 	</body>
 </html>

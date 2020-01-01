@@ -26,11 +26,16 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: './index.html',
+            inject: false,
             template: './src/index.html',
-            filename: './index.html'
         })
     ],
     resolve: {
         extensions: ['.js', '.ts', '.tsx'],
+    },
+    // TODO To be applied only on development mode
+    devServer: {
+      historyApiFallback: true
     }
 };
