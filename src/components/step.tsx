@@ -8,7 +8,11 @@ export const Step = (props: StepProps) => {
     return (
         <div className="step">
             <h3>Paso: {step.name}</h3>
-            <div className="thumbnail">🎥💃</div>
+            <video className="video-resource" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg" />
+                Your browser does not support HTML5 video.
+            </video>
             <p>{step.description || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...'}</p>
 
             <h4>Posiciones</h4>

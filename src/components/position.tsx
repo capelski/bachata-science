@@ -12,7 +12,7 @@ export const Position = (props: PositionProps) => {
     return (
         <div className="position">
             <h3>Posición: {position.name}</h3>
-            <div className="thumbnail">🎥💃</div>
+            <div className="thumbnail">👫📷</div>
             <p>{position.description || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...'}</p>
 
             <h4>Pasos de entrada</h4>
