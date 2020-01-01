@@ -33,8 +33,8 @@ export enum StepId {
     ondaConSentadilla = 'onda-con-sentadilla',
     ondaFrontal = 'onda-frontal',
     basicoMadrid = 'basico-madrid',
-    boomerang = 'boomerang',
-    abrebotellas = 'abrebotellas',
+    lancero = 'lancero',
+    titanic = 'titanic',
     catapulta = 'catapulta',
     tornado = 'tornado',
     molinillo = 'molinillo',
@@ -46,8 +46,7 @@ export interface Step {
     description?: string;
     id: StepId;
     name: string;
-    // TODO Make mandatory for all steps
-    positions?: PositionTransition[];
+    positions: PositionTransition[];
     ticks: number;
 }
 
@@ -166,145 +165,219 @@ export const steps: Step[] = [
     {
         id: StepId.vueltaConCambioDeMano,
         name: 'Vuelta con cambio de mano',
+        positions: [
+            {ending: PositionId.s, starting: PositionId.abierta},
+        ],
         ticks: 4
     },
     {
         id: StepId.enrosqueDeCintura,
         name: 'Enrosque de cintura',
         positions: [
-            PositionId.abierta,
-            PositionId.cerradaConUnaMano,
+            {ending: PositionId.enrosqueDeCintura, starting: PositionId.abierta},
+            {ending: PositionId.enrosqueDeCintura, starting: PositionId.cerradaConUnaMano},
         ],
         ticks: 4
     },
     {
         id: StepId.desnrosqueDeCintura,
         name: 'Desnrosque de cintura',
+        positions: [
+            {ending: PositionId.abierta, starting: PositionId.enrosqueDeCintura},
+        ],
         ticks: 4
     },
     {
         id: StepId.caminarEnroscado,
         name: 'Caminar enroscado',
+        positions: [ PositionId.enrosqueDeCintura ],
         ticks: 8
     },
     {
         id: StepId.alternarEnrosque,
         name: 'Alternar enrosque',
+        positions: [ PositionId.enrosqueDeCintura ],
         ticks: 4
     },
     {
         id: StepId.manoAlHombro,
         name: 'Mano al hombro',
+        positions: [
+            {ending: PositionId.manoAlHombro, starting: PositionId.s},
+        ],
         ticks: 4
     },
     {
         id: StepId.salidaDeManoAlHombro,
         name: 'Salida de mano al hombro',
+        positions: [
+            {ending: PositionId.s, starting: PositionId.manoAlHombro},
+            {ending: PositionId.brazosCruzados, starting: PositionId.manoAlHombro},
+        ],
         ticks: 4
     },
     {
         id: StepId.caminarConManoAlHombro,
         name: 'Caminar con mano al hombro',
+        positions: [PositionId.manoAlHombro],
         ticks: 8
     },
     {
         id: StepId.alternarManoAlHombro,
         name: 'Alternar mano al hombro',
+        positions: [PositionId.manoAlHombro],
         ticks: 4
     },
     {
         id: StepId.vueltaDeBrazosCruzados,
         name: 'Vuelta de brazos cruzados',
+        positions: [
+            { ending: PositionId.brazosCruzados, starting: PositionId.s}
+        ],
         ticks: 4
     },
     {
         id: StepId.bufanda,
         name: 'Bufanda',
+        positions: [
+            { ending: PositionId.cerradaConDosManos, starting: PositionId.brazosCruzados}
+        ],
         ticks: 4
     },
     {
         id: StepId.lanzarBrazos,
         name: 'Lanzar brazos',
+        positions: [
+            { ending: PositionId.manosEnCintura, starting: PositionId.brazosCruzados},
+            { ending: PositionId.manosEnCintura, starting: PositionId.abierta} 
+        ],
         ticks: 4
     },
     {
         id: StepId.vueltaDeBaldufa,
         name: 'Vuelta de baldufa',
+        positions: [
+            { ending: PositionId.manoALaEspalda, starting: PositionId.abierta},
+        ],
         ticks: 4
     },
     {
         id: StepId.vueltaDeTrazo,
         name: 'Vuelta de trazo',
+        positions: [
+            { ending: PositionId.iman, starting: PositionId.abierta},
+        ],
         ticks: 4
     },
     {
         id: StepId.peinadoFollower,
         name: 'Peinado follower',
+        positions: [
+            { ending: PositionId.arrastre, starting: PositionId.iman},
+        ],
         ticks: 4
     },
     {
         id: StepId.flecha,
         name: 'Flecha',
+        positions: [
+            { ending: PositionId.ampersand, starting: PositionId.abierta},
+        ],
         ticks: 4
     },
     {
         id: StepId.vueltaDobleSinSoltar,
         name: 'Vuelta doble sin soltar',
+        positions: [
+            { ending: PositionId.enrosqueDeCintura, starting: PositionId.ampersand},
+        ],
         ticks: 4
     },
     {
         id: StepId.ondaEnDobleTiempo,
         name: 'Onda en doble tiempo',
+        positions: [
+            PositionId.enrosqueDeCintura,
+            PositionId.manoAlHombro
+        ],
         ticks: 4
     },
     {
         id: StepId.ondaConSentadilla,
         name: 'Onda con sentadilla',
+        positions: [
+            PositionId.enrosqueDeCintura,
+            PositionId.manoAlHombro
+        ],
         ticks: 8
     },
     {
         id: StepId.ondaFrontal,
         name: 'Onda frontal',
+        positions: [ PositionId.cerradaConDosManos ],
         ticks: 4
     },
     {
         id: StepId.basicoMadrid,
         name: 'Basico madrid',
+        positions: [ PositionId.abierta ],
         ticks: 8
     },
     {
-        id: StepId.boomerang,
-        name: 'Boomerang',
-        ticks: 4
+        id: StepId.lancero,
+        name: 'Lancero',
+        positions: [
+            { ending: PositionId.lancero, starting: PositionId.cerradaConUnaMano }
+        ],
+        ticks: 8
     },
     {
-        id: StepId.abrebotellas,
-        name: 'Abrebotellas',
+        id: StepId.titanic,
+        name: 'Titanic',
+        positions: [
+            { ending: PositionId.titanic, starting: PositionId.cerradaConUnaMano },
+            { ending: PositionId.titanic, starting: PositionId.cerradaConDosManos }
+        ],
         ticks: 4
     },
     {
         id: StepId.catapulta,
         name: 'Catapulta',
+        positions: [
+            { ending: PositionId.cerradaConUnaMano, starting: PositionId.brazosCruzados }
+        ],
         ticks: 4
     },
     {
         id: StepId.tornado,
         name: 'Tornado',
+        positions: [
+            { ending: PositionId.s, starting: PositionId.brazosCruzados }
+        ],
         ticks: 4
     },
     {
         id: StepId.molinillo,
         name: 'Molinillo',
+        positions: [
+            { ending: PositionId.cerradaConUnaMano, starting: PositionId.abierta }
+        ],
         ticks: 8
     },
     {
         id: StepId.enrosqueDeCuello,
         name: 'Enrosque de cuello',
+        positions: [
+            { ending: PositionId.enrosqueDeCuello, starting: PositionId.avance }
+        ],
         ticks: 4
     },
     {
         id: StepId.vueltaConFinta,
         name: 'Vuelta con finta',
+        positions: [
+            { ending: PositionId.cerradaConUnaMano, starting: PositionId.avance }
+        ],
         ticks: 4
     }
 ];

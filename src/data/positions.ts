@@ -7,6 +7,14 @@ export enum PositionId {
     iman = 'iman',
     ampersand = 'ampersand',
     s = 's',
+    enrosqueDeCintura = 'enrosque-de-cintura',
+    manoAlHombro = 'mano-al-hombro',
+    brazosCruzados = 'brazos-cruzados',
+    manosEnCintura = 'manos-en-cintura',
+    manoALaEspalda = 'mano-a-la-espalda',
+    titanic = 'titanic',
+    enrosqueDeCuello = 'enrosque-de-cuello',
+    lancero = 'lancero',
 }
 
 export interface Position {
@@ -56,6 +64,38 @@ export const positions: Position[] = [
     {
         id: PositionId.s,
         name: 'S'
+    },
+    {
+        id: PositionId.enrosqueDeCintura,
+        name: 'Enrosque de cintura'
+    },
+    {
+        id: PositionId.manoAlHombro,
+        name: 'Mano al hombro'
+    },
+    {
+        id: PositionId.brazosCruzados,
+        name: 'Brazos cruzados'
+    },
+    {
+        id: PositionId.manosEnCintura,
+        name: 'Manos en cintura'
+    },
+    {
+        id: PositionId.manoALaEspalda,
+        name: 'Mano a la espalda'
+    },
+    {
+        id: PositionId.titanic,
+        name: 'Titanic'
+    },
+    {
+        id: PositionId.enrosqueDeCuello,
+        name: 'Enrosque de cuello'
+    },
+    {
+        id: PositionId.lancero,
+        name: 'Lancero'
     },
 ];
 
