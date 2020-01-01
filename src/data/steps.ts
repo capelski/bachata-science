@@ -1,11 +1,4 @@
-export interface Step {
-    id: StepIds;
-    description?: string;
-    name: string;
-    ticks: number;
-}
-
-enum StepIds {
+export enum StepId {
     basicoLateral = 'basico-lateral',
     basicoFrontal = 'basico-frontal',
     basicoEnElSitio = 'basico-en-el-sitio',
@@ -47,200 +40,209 @@ enum StepIds {
     vueltaConFinta = 'vuelta-con-finta',
 }
 
+export interface Step {
+    description?: string;
+    id: StepId;
+    name: string;
+    ticks: number;
+}
+
 export const steps: Step[] = [
     {
-        id: StepIds.basicoLateral,
+        id: StepId.basicoLateral,
         name: 'Basico lateral',
         ticks: 8
     },
     {
-        id: StepIds.basicoFrontal,
+        id: StepId.basicoFrontal,
         name: 'Basico frontal',
         ticks: 8
     },
     {
-        id: StepIds.basicoEnElSitio,
+        id: StepId.basicoEnElSitio,
         name: 'Basico en el sitio',
         ticks: 8
     },
     {
-        id: StepIds.dobleTiempo,
+        id: StepId.dobleTiempo,
         name: 'Doble tiempo',
         ticks: 8
     },
     {
-        id: StepIds.cuadrado,
+        id: StepId.cuadrado,
         name: 'Cuadrado',
         ticks: 8
     },
     {
-        id: StepIds.medioGiro,
+        id: StepId.medioGiro,
         name: 'Medio giro',
         ticks: 4
     },
     {
-        id: StepIds.pasoYPico,
+        id: StepId.pasoYPico,
         name: 'Paso y pico',
         ticks: 8
     },
     {
-        id: StepIds.slide,
+        id: StepId.slide,
         name: 'Slide',
         ticks: 4
     },
     {
-        id: StepIds.vueltaDeReloj,
+        id: StepId.vueltaDeReloj,
         name: 'Vuelta de reloj',
         ticks: 4
     },
     {
-        id: StepIds.vueltaDeBarriga,
+        id: StepId.vueltaDeBarriga,
         name: 'Vuelta de barriga',
         ticks: 4
     },
     {
-        id: StepIds.vueltaDeHombro,
+        id: StepId.vueltaDeHombro,
         name: 'Vuelta de hombro',
         ticks: 4
     },
     {
-        id: StepIds.vueltaConCambioDeMano,
+        id: StepId.vueltaConCambioDeMano,
         name: 'Vuelta con cambio de mano',
         ticks: 4
     },
     {
-        id: StepIds.enrosqueDeCintura,
+        id: StepId.enrosqueDeCintura,
         name: 'Enrosque de cintura',
         ticks: 4
     },
     {
-        id: StepIds.desnrosqueDeCintura,
+        id: StepId.desnrosqueDeCintura,
         name: 'Desnrosque de cintura',
         ticks: 4
     },
     {
-        id: StepIds.caminarEnroscado,
+        id: StepId.caminarEnroscado,
         name: 'Caminar enroscado',
         ticks: 8
     },
     {
-        id: StepIds.alternarEnrosque,
+        id: StepId.alternarEnrosque,
         name: 'Alternar enrosque',
         ticks: 4
     },
     {
-        id: StepIds.manoAlHombro,
+        id: StepId.manoAlHombro,
         name: 'Mano al hombro',
         ticks: 4
     },
     {
-        id: StepIds.salidaDeManoAlHombro,
+        id: StepId.salidaDeManoAlHombro,
         name: 'Salida de mano al hombro',
         ticks: 4
     },
     {
-        id: StepIds.caminarConManoAlHombro,
+        id: StepId.caminarConManoAlHombro,
         name: 'Caminar con mano al hombro',
         ticks: 8
     },
     {
-        id: StepIds.alternarManoAlHombro,
+        id: StepId.alternarManoAlHombro,
         name: 'Alternar mano al hombro',
         ticks: 4
     },
     {
-        id: StepIds.vueltaDeBrazosCruzados,
+        id: StepId.vueltaDeBrazosCruzados,
         name: 'Vuelta de brazos cruzados',
         ticks: 4
     },
     {
-        id: StepIds.bufanda,
+        id: StepId.bufanda,
         name: 'Bufanda',
         ticks: 4
     },
     {
-        id: StepIds.lanzarBrazos,
+        id: StepId.lanzarBrazos,
         name: 'Lanzar brazos',
         ticks: 4
     },
     {
-        id: StepIds.vueltaDeBaldufa,
+        id: StepId.vueltaDeBaldufa,
         name: 'Vuelta de baldufa',
         ticks: 4
     },
     {
-        id: StepIds.vueltaDeTrazo,
+        id: StepId.vueltaDeTrazo,
         name: 'Vuelta de trazo',
         ticks: 4
     },
     {
-        id: StepIds.peinadoFollower,
+        id: StepId.peinadoFollower,
         name: 'Peinado follower',
         ticks: 4
     },
     {
-        id: StepIds.flecha,
+        id: StepId.flecha,
         name: 'Flecha',
         ticks: 4
     },
     {
-        id: StepIds.vueltaDobleSinSoltar,
+        id: StepId.vueltaDobleSinSoltar,
         name: 'Vuelta doble sin soltar',
         ticks: 4
     },
     {
-        id: StepIds.ondaEnDobleTiempo,
+        id: StepId.ondaEnDobleTiempo,
         name: 'Onda en doble tiempo',
         ticks: 4
     },
     {
-        id: StepIds.ondaConSentadilla,
+        id: StepId.ondaConSentadilla,
         name: 'Onda con sentadilla',
         ticks: 8
     },
     {
-        id: StepIds.ondaFrontal,
+        id: StepId.ondaFrontal,
         name: 'Onda frontal',
         ticks: 4
     },
     {
-        id: StepIds.basicoMadrid,
+        id: StepId.basicoMadrid,
         name: 'Basico madrid',
         ticks: 8
     },
     {
-        id: StepIds.boomerang,
+        id: StepId.boomerang,
         name: 'Boomerang',
         ticks: 4
     },
     {
-        id: StepIds.abrebotellas,
+        id: StepId.abrebotellas,
         name: 'Abrebotellas',
         ticks: 4
     },
     {
-        id: StepIds.catapulta,
+        id: StepId.catapulta,
         name: 'Catapulta',
         ticks: 4
     },
     {
-        id: StepIds.tornado,
+        id: StepId.tornado,
         name: 'Tornado',
         ticks: 4
     },
     {
-        id: StepIds.molinillo,
+        id: StepId.molinillo,
         name: 'Molinillo',
         ticks: 8
     },
     {
-        id: StepIds.enrosqueDeCuello,
+        id: StepId.enrosqueDeCuello,
         name: 'Enrosque de cuello',
         ticks: 4
     },
     {
-        id: StepIds.vueltaConFinta,
+        id: StepId.vueltaConFinta,
         name: 'Vuelta con finta',
         ticks: 4
     }
 ];
+
+export const getStep = (id: StepId) => steps.find(s => s.id === id);

@@ -4,39 +4,47 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		<style>
-			.all-steps {
+			.steps-list {
 				display: flex;
 				flex-wrap: wrap;
 				margin-bottom: 30px;
 			}
 
-			.all-steps .step {
+			.steps-list .step,
+			.steps-list .step-preview {
 				flex: 0 0 100%;
-				padding: 10px;
 				box-sizing: border-box;
 			}
 
 			@media(min-width: 768px) {
-				.all-steps .step {
+				.steps-list .step,
+				.steps-list .step-preview {
 					flex: 0 0 50%;
 				}
 			}
 
 			@media(min-width: 992px) {
-				.all-steps .step {
+				.steps-list .step,
+				.steps-list .step-preview {
 					flex: 0 0 25%;
 				}
 			}
 
-			.all-steps .step:nth-child(4n + 1) {
+			.steps-list .step:nth-child(4n + 1),
+			.steps-list .step-preview:nth-child(4n + 1) {
 				padding-left: 0;
 			}
 
-			.all-steps .step:nth-child(4n) {
+			.steps-list .step:nth-child(4n),
+			.steps-list .step-preview:nth-child(4n)  {
 				padding-right: 0;
 			}
 
-			.all-steps .step .thumbnail {
+			.step {
+				padding: 10px;
+			}
+			
+			.step .thumbnail {
 				border: 1px solid black;
 				font-size: 30px;
 				height: 100px;
@@ -48,42 +56,5 @@
 	</head>
 	<body>
 		<div id="app-placeholder"></div>
-
-		<div id="glosario">
-			<h2>Glosario</h2>
-
-			<h3>Leader</h3>
-			<p>Persona que dirige el baile (habitualmente el chico en una pareja chico-chica)</p>
-			<h3>Follower</h3>
-			<p>Persona que se deja guiar (habitualmente la chica en una pareja chico-chica)</p>
-
-			<h3>Vuelta</h3>
-			<p>Leader y/o follower giran respeto su propio eje central (por ejemplo, vuelta de reloj)</p>
-			<h3>Giro</h3>
-			<p>Leader y/o follower giran respeto un eje fuera de su centro (por ejemplo, giro en el sitio)</p>
-
-			<h3>Mano avance</h3>
-			<p>La mano del lado correspondiente a la dirección de avance lateral (cuando los brazos no estan cruzados). Por ejemplo</p>
-			<ul>
-				<li>En los tiempos 1, 2, 3 y 4 de un basico lateral, la mano izquierda del leader y la mano derecha del follower</li>
-				<li>En los tiempos 5, 6, 7 y 8 de un basico lateral, la mano derecha del leader y la mano izquierda del follower</li>
-			</ul>
-
-			<h3>Mano arrastre</h3>
-			<p>La mano del lado opuesto a la dirección de avance lateral (cuando los brazos no estan cruzados). Por ejemplo</p>
-			<ul>
-				<li>En los tiempos 1, 2, 3 y 4 de un basico lateral, la mano derecha del leader y la mano izquierda del follower</li>
-				<li>En los tiempos 5, 6, 7 y 8 de un basico lateral, la mano izquierda del leader y la mano derecha del follower</li>
-			</ul>
-		</div>
-
-		<div id="posiciones">
-			<h2>Posiciones</h2>
-
-			<h3>Posicion abierta</h3>
-			<h3>Posicion cerrada</h3>
-			<h3>Posicion avance</h3>
-			<h3>Posicion arrastre</h3>
-		</div>
 	</body>
 </html>
