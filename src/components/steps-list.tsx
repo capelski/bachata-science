@@ -1,9 +1,9 @@
 import React from 'react';
+import { StepId } from '../data/steps';
 import { StepPreview } from './step-preview';
-import { steps } from '../data/steps';
 
 export const StepsList = () => (
     <div className="steps-list">
-        {steps.map(step => <StepPreview key={step.id} {...step} />)}
+        {Object.values(StepId).map(stepId => <StepPreview key={stepId} stepId={stepId} />)}
     </div>
 );

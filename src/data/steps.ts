@@ -1,3 +1,5 @@
+import { PositionId, PositionTransition } from './positions';
+
 export enum StepId {
     basicoLateral = 'basico-lateral',
     basicoFrontal = 'basico-frontal',
@@ -8,7 +10,7 @@ export enum StepId {
     pasoYPico = 'paso-y-pico',
     slide = 'slide',
     vueltaDeReloj = 'vuelta-de-reloj',
-    vueltaDeBarriga = 'vuelta-de-barriga',
+    vueltaDeAbdomen = 'vuelta-de-abdomen',
     vueltaDeHombro = 'vuelta-de-hombro',
     vueltaConCambioDeMano = 'vuelta-con-cambio-de-mano',
     enrosqueDeCintura = 'enrosque-de-cintura',
@@ -44,63 +46,121 @@ export interface Step {
     description?: string;
     id: StepId;
     name: string;
+    // TODO Make mandatory for all steps
+    positions?: PositionTransition[];
     ticks: number;
+}
+
+export interface StepProps {
+    stepId: StepId;
 }
 
 export const steps: Step[] = [
     {
         id: StepId.basicoLateral,
         name: 'Basico lateral',
+        positions: [
+            PositionId.abierta,
+            PositionId.ampersand,
+            PositionId.cerradaConDosManos,
+            PositionId.cerradaConUnaMano,
+        ],
         ticks: 8
     },
     {
         id: StepId.basicoFrontal,
         name: 'Basico frontal',
+        positions: [
+            PositionId.abierta,
+            PositionId.ampersand,
+            PositionId.cerradaConDosManos,
+            PositionId.cerradaConUnaMano,
+        ],
         ticks: 8
     },
     {
         id: StepId.basicoEnElSitio,
         name: 'Basico en el sitio',
+        positions: [
+            PositionId.cerradaConDosManos,
+            PositionId.cerradaConUnaMano,
+        ],
         ticks: 8
     },
     {
         id: StepId.dobleTiempo,
         name: 'Doble tiempo',
+        positions: [
+            PositionId.cerradaConDosManos
+        ],
         ticks: 8
     },
     {
         id: StepId.cuadrado,
         name: 'Cuadrado',
+        positions: [
+            PositionId.abierta,
+            PositionId.ampersand,
+            PositionId.cerradaConDosManos,
+            PositionId.cerradaConUnaMano,
+        ],
         ticks: 8
     },
     {
         id: StepId.medioGiro,
         name: 'Medio giro',
+        positions: [
+            PositionId.cerradaConDosManos,
+            PositionId.cerradaConUnaMano,
+        ],
         ticks: 4
     },
     {
         id: StepId.pasoYPico,
         name: 'Paso y pico',
+        positions: [
+            PositionId.abierta,
+        ],
         ticks: 8
     },
     {
         id: StepId.slide,
         name: 'Slide',
+        positions: [
+            PositionId.cerradaConDosManos,
+            PositionId.cerradaConUnaMano,
+        ],
         ticks: 4
     },
     {
         id: StepId.vueltaDeReloj,
         name: 'Vuelta de reloj',
+        positions: [
+            PositionId.abierta,
+            PositionId.cerradaConUnaMano,
+        ],
         ticks: 4
     },
     {
-        id: StepId.vueltaDeBarriga,
-        name: 'Vuelta de barriga',
+        id: StepId.vueltaDeAbdomen,
+        name: 'Vuelta de abdomen',
+        positions: [
+            {
+                ending: PositionId.s,
+                starting: PositionId.abierta,
+            }
+        ],
         ticks: 4
     },
     {
         id: StepId.vueltaDeHombro,
         name: 'Vuelta de hombro',
+        positions: [
+            {
+                ending: PositionId.s,
+                starting: PositionId.abierta,
+            }
+        ],
         ticks: 4
     },
     {
@@ -111,6 +171,10 @@ export const steps: Step[] = [
     {
         id: StepId.enrosqueDeCintura,
         name: 'Enrosque de cintura',
+        positions: [
+            PositionId.abierta,
+            PositionId.cerradaConUnaMano,
+        ],
         ticks: 4
     },
     {

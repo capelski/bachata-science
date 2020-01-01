@@ -1,10 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { PositionId, getPosition } from '../data/positions';
+import { getPosition, PositionProps } from '../data/positions';
 
-export const Position = () => {
-    const { positionId } = useParams();
-    const position = getPosition(positionId as PositionId);
+export const Position = (props: PositionProps) => {
+    const position = getPosition(props.positionId);
 
     return (
         <div className="position">

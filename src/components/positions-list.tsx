@@ -1,9 +1,9 @@
 import React from 'react';
+import { PositionId } from '../data/positions';
 import { PositionPreview } from './position-preview';
-import { positions } from '../data/positions';
 
 export const PositionsList = () => (
     <div className="positions-list">
-        {positions.map(position => <PositionPreview key={position.id} {...position} />)}
+        {Object.values(PositionId).map(positionId => <PositionPreview key={positionId} positionId={positionId} />)}
     </div>
 );

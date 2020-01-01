@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Position } from '../data/positions';
+import { PositionProps, getPosition } from '../data/positions';
 
-export const PositionPreview = (props: Position) => (
-    <div className="position-preview">
-        <h3><Link to={`/position/${props.id}`}>{props.name}</Link></h3>
-    </div>
-);
+export const PositionPreview = (props: PositionProps) => {
+    const position = getPosition(props.positionId);
+    return <Link className="position-preview" to={`/position/${position.id}`}>{position.name}</Link>;
+};

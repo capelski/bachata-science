@@ -6,6 +6,7 @@ export enum PositionId {
     arrastre = 'arrastre',
     iman = 'iman',
     ampersand = 'ampersand',
+    s = 's',
 }
 
 export interface Position {
@@ -13,6 +14,15 @@ export interface Position {
     id: PositionId;
     name: string;
 }
+
+export interface PositionProps {
+    positionId: PositionId;
+}
+
+export type PositionTransition = PositionId | {
+    ending: PositionId;
+    starting: PositionId;
+};
 
 export const positions: Position[] = [
     {
@@ -42,6 +52,10 @@ export const positions: Position[] = [
     {
         id: PositionId.ampersand,
         name: 'Ampersand'
+    },
+    {
+        id: PositionId.s,
+        name: 'S'
     },
 ];
 
