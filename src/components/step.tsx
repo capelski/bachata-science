@@ -1,11 +1,7 @@
 import React from 'react';
+import { Step as IStep } from './steps';
 
-export interface StepProps {
-    name: string;
-    description?: string;
-}
-
-export const Step = (props: StepProps) => (
+export const Step = (props: IStep) => (
     <div className="step">
         <h3>{props.name}</h3>
         <div className="thumbnail">🎥💃</div>
