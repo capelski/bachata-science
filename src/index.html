@@ -4,47 +4,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		<style>
+			.positions-list,
 			.steps-list {
 				display: flex;
 				flex-wrap: wrap;
 				margin-bottom: 30px;
 			}
 
-			.steps-list .step,
+			.positions-list .position-preview,
 			.steps-list .step-preview {
 				flex: 0 0 100%;
+				padding: 10px;
 				box-sizing: border-box;
 			}
 
 			@media(min-width: 768px) {
-				.steps-list .step,
+				.positions-list .position-preview,
 				.steps-list .step-preview {
 					flex: 0 0 50%;
 				}
 			}
 
 			@media(min-width: 992px) {
-				.steps-list .step,
+				.positions-list .position-preview,
 				.steps-list .step-preview {
 					flex: 0 0 25%;
 				}
 			}
 
-			.steps-list .step:nth-child(4n + 1),
+			.positions-list .position-preview:nth-child(4n + 1),
 			.steps-list .step-preview:nth-child(4n + 1) {
 				padding-left: 0;
 			}
 
-			.steps-list .step:nth-child(4n),
+			.positions-list .position-preview:nth-child(4n),
 			.steps-list .step-preview:nth-child(4n)  {
 				padding-right: 0;
 			}
 
-			.step {
-				padding: 10px;
-			}
-			
-			.step .thumbnail {
+			.thumbnail {
 				border: 1px solid black;
 				font-size: 30px;
 				height: 100px;
