@@ -383,3 +383,15 @@ export const steps: Step[] = [
 ];
 
 export const getStep = (id: StepId) => steps.find(s => s.id === id);
+
+export const getInputSteps = (positionId: PositionId) => steps.filter(step => {
+    return step.positions.find(p => typeof p !== 'string' && p.ending === positionId);
+});
+
+export const getOutputSteps = (positionId: PositionId) => steps.filter(step => {
+    return step.positions.find(p => typeof p !== 'string' && p.starting === positionId);
+});
+
+export const getPositionSteps = (positionId: PositionId) => steps.filter(step => {
+    return step.positions.find(p => typeof p === 'string' && p === positionId);
+});
