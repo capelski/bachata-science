@@ -32,16 +32,16 @@ const App = () => (
             <nav>
                 <ul>
                     <li>
-                    <Link to="/">Inicio</Link>
+                    <Link to="/?$modena=bachata-science">Inicio</Link>
                     </li>
                     <li>
-                    <Link to="/glossary">Glosario</Link>
+                    <Link to="/glossary?$modena=bachata-science">Glosario</Link>
                     </li>
                     <li>
-                    <Link to="/positions">Posiciones</Link>
+                    <Link to="/positions?$modena=bachata-science">Posiciones</Link>
                     </li>
                     <li>
-                    <Link to="/steps">Pasos</Link>
+                    <Link to="/steps?$modena=bachata-science">Pasos</Link>
                     </li>
                 </ul>
             </nav>

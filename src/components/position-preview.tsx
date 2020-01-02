@@ -4,5 +4,5 @@ import { PositionProps, getPosition } from '../data/positions';
 
 export const PositionPreview = (props: PositionProps) => {
     const position = getPosition(props.positionId);
-    return <Link className="position-preview" to={`/position/${position.id}`}>{position.name}</Link>;
+    return <Link className="position-preview" to={`/position/${position.id}?$modena=bachata-science`}>{position.name}</Link>;
 };

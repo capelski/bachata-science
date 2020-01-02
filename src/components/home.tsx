@@ -9,6 +9,6 @@ export const Home = () => (
             
         <p>Puede que los nombres no te gusten (acepto sugerencias mejores) o que eches de menos tu paso preferido (en cuyo caso, escríbeme a <b>capellas.carles@gmail.com</b> explicando como se hace y lo añadire).</p>
     
-        <p>Verás que utilizo términos inventados para definir los pasos; tal vez te ayude echar un vistazo al <Link to="/glossary">glosario</Link></p>
+        <p>Verás que utilizo términos inventados para definir los pasos; tal vez te ayude echar un vistazo al <Link to="/glossary?$modena=bachata-science">glosario</Link></p>
     </React.Fragment>
 );
