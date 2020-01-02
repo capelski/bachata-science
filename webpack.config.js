@@ -22,12 +22,12 @@ module.exports = {
         ]     
     },
     output: {
-        filename: 'main.js'
+        filename: 'main.js?$modena=bachata-science',
+        publicPath: '/',
     },
     plugins: [
         new HtmlWebpackPlugin({
             filename: './index.html',
-            inject: false,
             template: './src/index.html',
         })
     ],
