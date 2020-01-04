@@ -10,7 +10,7 @@ export const Step = (props: StepProps) => {
             <h3>Paso: {step.name}</h3>
             {step.videoFile && 
                 <video className="video-resource" controls>
-                    <source src={`/videos/${step.videoFile}.mp4`} type="video/mp4" />
+                    <source src={`/videos/${step.videoFile}.mp4?$modena=bachata-science`} type="video/mp4" />
                     No se puede reproducir el video en este navegador
                 </video>
             }
