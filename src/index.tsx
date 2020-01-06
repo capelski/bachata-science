@@ -13,6 +13,7 @@ import { Position } from './components/position';
 import { PositionsList } from './components/positions-list';
 import { Step } from './components/step';
 import { StepsList } from './components/steps-list';
+import './style/main.scss'; 
 
 interface ParametrizedRouteProps<T> {
     component: React.FC<T>;
