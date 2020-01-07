@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route, Link, useParams } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Switch, useParams } from 'react-router-dom';
 import { Glossary } from './components/glossary';
 import { Home } from './components/home';
 import { Position } from './components/position';
@@ -21,6 +21,7 @@ function ParametrizedRoute<T>(props: ParametrizedRouteProps<T>) {
     return props.component(componentProps);
 }
 
+// tslint:disable-next-line:variable-name
 const App = () => (
     <BrowserRouter>
         <div>

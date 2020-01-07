@@ -2,6 +2,7 @@ import React from 'react';
 import { getStep, StepProps } from '../data/steps';
 import { PositionPreview } from './position-preview';
 
+// tslint:disable-next-line:variable-name
 export const Step = (props: StepProps) => {
     const step = getStep(props.stepId);
 
@@ -9,7 +10,7 @@ export const Step = (props: StepProps) => {
         <div className="step">
             <h3>Paso: {step.name}</h3>
             {step.videoFile && (
-                <video className="video-resource" controls>
+                <video className="video-resource" controls={true}>
                     <source
                         src={`/videos/${step.videoFile}.mp4?$modena=bachata-science`}
                         type="video/mp4"

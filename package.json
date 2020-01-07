@@ -9,8 +9,8 @@
         "clean:dependencies": "rm -rf node_modules/ package-lock.json",
         "lint": "tslint -e 'node_modules/**' -p .",
         "lint:fix": "tslint -e 'node_modules/**' -p . --fix",
-        "prettier:check": "prettier --list-different \"src/**/*.{ts,tsx}\"",
-        "prettier:write": "prettier --write \"src/**/*.{ts,tsx}\"",
+        "prettier": "prettier --list-different \"src/**/*.{ts,tsx}\"",
+        "prettier:fix": "prettier --write \"src/**/*.{ts,tsx}\"",
         "start": "node index.js",
         "start:dev": "webpack-dev-server --open --mode development"
     },

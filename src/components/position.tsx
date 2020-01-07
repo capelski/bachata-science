@@ -3,6 +3,7 @@ import { getPosition, PositionProps } from '../data/positions';
 import { getInputSteps, getOutputSteps, getPositionSteps } from '../data/steps';
 import { StepPreview } from './step-preview';
 
+// tslint:disable-next-line:variable-name
 export const Position = (props: PositionProps) => {
     const position = getPosition(props.positionId);
     const inputSteps = getInputSteps(props.positionId);
@@ -21,8 +22,8 @@ export const Position = (props: PositionProps) => {
             <h4>Pasos de entrada</h4>
             {inputSteps.length > 0 ? (
                 inputSteps.map(step => (
-                    <div>
-                        <StepPreview key={step.id} stepId={step.id} />
+                    <div key={step.id}>
+                        <StepPreview stepId={step.id} />
                     </div>
                 ))
             ) : (
@@ -32,8 +33,8 @@ export const Position = (props: PositionProps) => {
             <h4>Pasos en posición</h4>
             {positionSteps.length > 0 ? (
                 positionSteps.map(step => (
-                    <div>
-                        <StepPreview key={step.id} stepId={step.id} />
+                    <div key={step.id}>
+                        <StepPreview stepId={step.id} />
                     </div>
                 ))
             ) : (
@@ -43,8 +44,8 @@ export const Position = (props: PositionProps) => {
             <h4>Pasos de salida</h4>
             {outputSteps.length > 0 ? (
                 outputSteps.map(step => (
-                    <div>
-                        <StepPreview key={step.id} stepId={step.id} />
+                    <div key={step.id}>
+                        <StepPreview stepId={step.id} />
                     </div>
                 ))
             ) : (

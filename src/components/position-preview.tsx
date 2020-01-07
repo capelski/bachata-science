@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PositionProps, getPosition } from '../data/positions';
+import { getPosition, PositionProps } from '../data/positions';
 
+// tslint:disable-next-line:variable-name
 export const PositionPreview = (props: PositionProps) => {
     const position = getPosition(props.positionId);
     return (

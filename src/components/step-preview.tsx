@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getStep, StepProps } from '../data/steps';
 
+// tslint:disable-next-line:variable-name
 export const StepPreview = (props: StepProps) => {
     const step = getStep(props.stepId);
     return (
