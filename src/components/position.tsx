@@ -13,25 +13,43 @@ export const Position = (props: PositionProps) => {
         <div className="position">
             <h3>Posición: {position.name}</h3>
             <div className="thumbnail">👫📷</div>
-            <p>{position.description || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...'}</p>
+            <p>
+                {position.description ||
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...'}
+            </p>
 
             <h4>Pasos de entrada</h4>
-            {inputSteps.length > 0 ? 
-                inputSteps.map(step => <div><StepPreview key={step.id} stepId={step.id} /></div>) :
+            {inputSteps.length > 0 ? (
+                inputSteps.map(step => (
+                    <div>
+                        <StepPreview key={step.id} stepId={step.id} />
+                    </div>
+                ))
+            ) : (
                 <div>No hay pasos de entrada para esta posición</div>
-            }
+            )}
 
             <h4>Pasos en posición</h4>
-            {positionSteps.length > 0 ?
-                positionSteps.map(step => <div><StepPreview key={step.id} stepId={step.id} /></div>) :
+            {positionSteps.length > 0 ? (
+                positionSteps.map(step => (
+                    <div>
+                        <StepPreview key={step.id} stepId={step.id} />
+                    </div>
+                ))
+            ) : (
                 <div>No hay pasos en esta posición</div>
-            }
+            )}
 
             <h4>Pasos de salida</h4>
-            {outputSteps.length > 0 ? 
-                outputSteps.map(step => <div><StepPreview key={step.id} stepId={step.id} /></div>) :
+            {outputSteps.length > 0 ? (
+                outputSteps.map(step => (
+                    <div>
+                        <StepPreview key={step.id} stepId={step.id} />
+                    </div>
+                ))
+            ) : (
                 <div>No hay pasos de salida para esta posición</div>
-            }
+            )}
         </div>
     );
 };

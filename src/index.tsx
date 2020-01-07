@@ -1,19 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-    BrowserRouter,
-    Switch,
-    Route,
-    Link,
-    useParams,
-} from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link, useParams } from 'react-router-dom';
 import { Glossary } from './components/glossary';
 import { Home } from './components/home';
 import { Position } from './components/position';
 import { PositionsList } from './components/positions-list';
 import { Step } from './components/step';
 import { StepsList } from './components/steps-list';
-import './style/main.scss'; 
+import './style/main.scss';
 
 interface ParametrizedRouteProps<T> {
     component: React.FC<T>;
@@ -25,7 +19,7 @@ function ParametrizedRoute<T>(props: ParametrizedRouteProps<T>) {
     const parameterValue = parameters[props.parameterName as string];
     const componentProps = { [props.parameterName]: parameterValue } as T;
     return props.component(componentProps);
-};
+}
 
 const App = () => (
     <BrowserRouter>
@@ -33,16 +27,16 @@ const App = () => (
             <nav>
                 <ul>
                     <li>
-                    <Link to="/?$modena=bachata-science">Inicio</Link>
+                        <Link to="/?$modena=bachata-science">Inicio</Link>
                     </li>
                     <li>
-                    <Link to="/glossary?$modena=bachata-science">Glosario</Link>
+                        <Link to="/glossary?$modena=bachata-science">Glosario</Link>
                     </li>
                     <li>
-                    <Link to="/positions?$modena=bachata-science">Posiciones</Link>
+                        <Link to="/positions?$modena=bachata-science">Posiciones</Link>
                     </li>
                     <li>
-                    <Link to="/steps?$modena=bachata-science">Pasos</Link>
+                        <Link to="/steps?$modena=bachata-science">Pasos</Link>
                     </li>
                 </ul>
             </nav>

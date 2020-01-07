@@ -14,7 +14,7 @@ export enum PositionId {
     manoHombro = 'mano-hombro',
     manosCintura = 'manos-cintura',
     s = 's',
-    titanic = 'titanic',
+    titanic = 'titanic'
 }
 
 export interface Position {
@@ -27,10 +27,12 @@ export interface PositionProps {
     positionId: PositionId;
 }
 
-export type PositionTransition = PositionId | {
-    ending: PositionId;
-    starting: PositionId;
-};
+export type PositionTransition =
+    | PositionId
+    | {
+          ending: PositionId;
+          starting: PositionId;
+      };
 
 export const positions: Position[] = [
     {
@@ -96,7 +98,7 @@ export const positions: Position[] = [
     {
         id: PositionId.titanic,
         name: 'Titanic'
-    },
+    }
 ];
 
 export const getPosition = (id: PositionId) => positions.find(p => p.id === id);
