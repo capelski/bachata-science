@@ -17,7 +17,9 @@ export const Glossary = () => (
 
         <p>
             <b>Vuelta</b>: Leader y/o follower giran respeto su propio eje central (por ejemplo,
-            vuelta de reloj)
+            vuelta de reloj). Por defecto, cuando hablo de vuelta me refiero a vuelta por el pecho o
+            vuelta por delante; cuando me refiero a vuelta por la espalda o vuelta por detrás, lo
+            menciono explicitamente
         </p>
 
         <p>

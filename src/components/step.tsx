@@ -18,11 +18,10 @@ export const Step = (props: StepProps) => {
                     No se puede reproducir el video en este navegador
                 </video>
             )}
-            <p>Tiempos: {step.ticks}</p>
             <p>
-                {step.description ||
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...'}
+                <b>Tiempos</b>: {step.ticks}
             </p>
+            {step.description && <p>{step.description}</p>}
 
             <h4>Posiciones</h4>
             {step.positions.map((position, index) =>

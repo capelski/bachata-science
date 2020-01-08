@@ -12,6 +12,7 @@ export enum StepId {
     caminarManoHombro = 'caminar-mano-hombro',
     catapulta = 'catapulta',
     cuadrado = 'cuadrado',
+    desconexion = 'desconexion',
     desnrosqueCintura = 'desnrosque-cintura',
     desnrosqueCuello = 'desnrosque-cuello',
     dobleTiempo = 'doble-tiempo',
@@ -30,6 +31,7 @@ export enum StepId {
     pasoPico = 'paso-pico',
     peinadoFollower = 'peinado-follower',
     salidaManoHombro = 'salida-mano-hombro',
+    serpentina = 'serpentina',
     slide = 'slide',
     titanic = 'titanic',
     tornado = 'tornado',
@@ -148,6 +150,15 @@ export const steps: Step[] = [
         ],
         ticks: 8,
         videoFile: 'cuadrado'
+    },
+    {
+        id: StepId.desconexion,
+        name: 'Desconexión',
+        positions: [
+            { ending: PositionId.abierta, starting: PositionId.cerradaDosManos },
+            { ending: PositionId.abierta, starting: PositionId.cerradaUnaMano }
+        ],
+        ticks: 4
     },
     {
         id: StepId.desnrosqueCintura,
@@ -284,6 +295,15 @@ export const steps: Step[] = [
         ],
         ticks: 4,
         videoFile: 'salida-mano-hombro'
+    },
+    {
+        id: StepId.serpentina,
+        name: 'Serpentina',
+        positions: [
+            { ending: PositionId.cerradaUnaMano, starting: PositionId.abierta },
+            { ending: PositionId.cerradaDosManos, starting: PositionId.cerradaUnaMano }
+        ],
+        ticks: 4
     },
     {
         id: StepId.slide,

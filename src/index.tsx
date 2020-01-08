@@ -5,6 +5,7 @@ import { Glossary } from './components/glossary';
 import { Home } from './components/home';
 import { Position } from './components/position';
 import { PositionsList } from './components/positions-list';
+import { Stages } from './components/stages';
 import { Step } from './components/step';
 import { StepsList } from './components/steps-list';
 import './style/main.scss';
@@ -31,6 +32,9 @@ const App = () => (
                         <Link to="/?$modena=bachata-science">Inicio</Link>
                     </li>
                     <li>
+                        <Link to="/stages?$modena=bachata-science">Fases</Link>
+                    </li>
+                    <li>
                         <Link to="/glossary?$modena=bachata-science">Glosario</Link>
                     </li>
                     <li>
@@ -51,6 +55,9 @@ const App = () => (
                 </Route>
                 <Route path="/positions">
                     <PositionsList />
+                </Route>
+                <Route path="/stages">
+                    <Stages />
                 </Route>
                 <Route path="/step/:stepId">
                     <ParametrizedRoute component={Step} parameterName="stepId" />
