@@ -48,6 +48,7 @@ export enum StepId {
 }
 
 export interface Step {
+    dependencies?: StepId[];
     description?: string;
     id: StepId;
     name: string;
@@ -88,6 +89,8 @@ export const steps: Step[] = [
         videoFile: 'basico-frontal'
     },
     {
+        description:
+            'Tambien se puede cruzar en vez de desplazar la pierna, pasando la pierna por delante o por detras en los tiempos 2 y 6',
         id: StepId.basicoLateral,
         name: 'Basico lateral',
         positions: [
@@ -140,6 +143,8 @@ export const steps: Step[] = [
         videoFile: 'catapulta'
     },
     {
+        dependencies: [StepId.basicoFrontal, StepId.basicoLateral],
+        description: 'Medio basico lateral más medio basico frontal',
         id: StepId.cuadrado,
         name: 'Cuadrado',
         positions: [
@@ -152,6 +157,8 @@ export const steps: Step[] = [
         videoFile: 'cuadrado'
     },
     {
+        description:
+            'Transición de posicion cerrada a abierta en que el leader se aleja del follower desplazando sus brazos por debajo de los del follower, imitando un movimiento de caricia. También se puede hacer con una onda de pecho',
         id: StepId.desconexion,
         name: 'Desconexión',
         positions: [
@@ -266,6 +273,9 @@ export const steps: Step[] = [
         videoFile: 'onda-sentadilla'
     },
     {
+        dependencies: [StepId.serpentina],
+        description:
+            'Serpentina doble, desplazando un brazo en los dos primeros tiempos y el otro brazo en los dos ultimos',
         id: StepId.parabrisas,
         name: 'Parabrisas',
         positions: [{ ending: PositionId.cerradaDosManos, starting: PositionId.abierta }],
@@ -273,6 +283,7 @@ export const steps: Step[] = [
         videoFile: 'parabrisas'
     },
     {
+        // TODO a.k.a. abre y cierra
         id: StepId.pasoPico,
         name: 'Paso y pico',
         positions: [PositionId.abierta],
@@ -297,6 +308,8 @@ export const steps: Step[] = [
         videoFile: 'salida-mano-hombro'
     },
     {
+        description:
+            'Transición de posición abierta a cerrada con una mano, en que el leader desliza su brazo por debajo del brazo del follower, llevando a la mano hacia la espalda del follower. También se puede hacer para pasar de cerrada con una mano a cerrada con dos manos.',
         id: StepId.serpentina,
         name: 'Serpentina',
         positions: [
@@ -353,6 +366,8 @@ export const steps: Step[] = [
         ticks: 4
     },
     {
+        description:
+            'El leader suelta la mano de avance en el primer tiempo y empieza una vuelta. Cuando el leader esta de espaldas al follower (en el segundo/tercer tiempo), coge la mano de arrastre del follower con su mano de avance, antes de completar la vuelta. El follower se desplaza con un basico lateral',
         id: StepId.vueltaCambioMano,
         name: 'Vuelta con cambio de mano',
         positions: [{ ending: PositionId.s, starting: PositionId.abierta }],
@@ -392,6 +407,8 @@ export const steps: Step[] = [
         videoFile: 'vuelta-muelle'
     },
     {
+        description:
+            'El leader suelta la mano de avance y marca una vuelta al follower con la mano de arrastre, poniendola palma con palma con la mano del follower, en una posición similar a la de mirar el reloj. Cuando es el leader quien da la vuelta, no se la marca al follower',
         id: StepId.vueltaReloj,
         name: 'Vuelta de reloj',
         positions: [PositionId.abierta, PositionId.cerradaUnaMano],

@@ -1,6 +1,7 @@
 import React from 'react';
 import { getStep, StepProps } from '../data/steps';
 import { PositionPreview } from './position-preview';
+import { StepPreview } from './step-preview';
 
 // tslint:disable-next-line:variable-name
 export const Step = (props: StepProps) => {
@@ -9,19 +10,10 @@ export const Step = (props: StepProps) => {
     return (
         <div className="step">
             <h3>Paso: {step.name}</h3>
-            {step.videoFile && (
-                <video className="video-resource" controls={true}>
-                    <source
-                        src={`/videos/${step.videoFile}.mp4?$modena=bachata-science`}
-                        type="video/mp4"
-                    />
-                    No se puede reproducir el video en este navegador
-                </video>
-            )}
+            {step.description && <p>{step.description}</p>}
             <p>
                 <b>Tiempos</b>: {step.ticks}
             </p>
-            {step.description && <p>{step.description}</p>}
 
             <h4>Posiciones</h4>
             {step.positions.map((position, index) =>
@@ -35,6 +27,27 @@ export const Step = (props: StepProps) => {
                         <PositionPreview positionId={position.ending} />
                     </div>
                 )
+            )}
+
+            {step.dependencies && (
+                <React.Fragment>
+                    <h4>Requiere</h4>
+                    {step.dependencies.map(dependencyId => (
+                        <div key={dependencyId}>
+                            <StepPreview stepId={dependencyId} />
+                        </div>
+                    ))}
+                </React.Fragment>
+            )}
+
+            {step.videoFile && (
+                <video className="video-resource" controls={true}>
+                    <source
+                        src={`/videos/${step.videoFile}.mp4?$modena=bachata-science`}
+                        type="video/mp4"
+                    />
+                    No se puede reproducir el video en este navegador
+                </video>
             )}
         </div>
     );
