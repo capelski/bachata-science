@@ -1,12 +1,15 @@
 {
     "compilerOptions": {
         "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
         "jsx": "react",
-        "lib": [
-            "dom",
-            "es2017",
-        ],
+        "lib": ["dom", "es2017"],
         "module": "commonjs",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "strictNullChecks": true,
         "target": "es5"
     },
     "exclude": ["node_modules/"],

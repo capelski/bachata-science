@@ -101,4 +101,4 @@ export const positions: Position[] = [
     }
 ];
 
-export const getPosition = (id: PositionId) => positions.find(p => p.id === id);
+export const getPosition = (id: PositionId) => positions.find(p => p.id === id)!;

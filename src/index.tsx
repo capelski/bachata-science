@@ -16,9 +16,9 @@ interface ParametrizedRouteProps<T> {
 }
 
 function ParametrizedRoute<T>(props: ParametrizedRouteProps<T>) {
-    const parameters = useParams();
+    const parameters = useParams<{ [key: string]: string }>();
     const parameterValue = parameters[props.parameterName as string];
-    const componentProps = { [props.parameterName]: parameterValue } as T;
+    const componentProps = ({ [props.parameterName]: parameterValue } as unknown) as T;
     return props.component(componentProps);
 }
 

@@ -424,7 +424,7 @@ export const steps: Step[] = [
     }
 ];
 
-export const getStep = (id: StepId) => steps.find(s => s.id === id);
+export const getStep = (id: StepId) => steps.find(s => s.id === id)!;
 
 export const getInputSteps = (positionId: PositionId) =>
     steps.filter(step => {
