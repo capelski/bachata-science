@@ -4,7 +4,7 @@ import { parseSearchText } from './shared';
 import { StepPreview } from './step-preview';
 
 // tslint:disable-next-line:variable-name
-export const StepsList = () => {
+export const StepsList: React.FC = () => {
     const [steps, setSteps] = React.useState(allSteps);
 
     // TODO Debounce

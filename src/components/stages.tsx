@@ -3,7 +3,7 @@ import { stages } from '../data/stages';
 import { StepPreview } from './step-preview';
 
 // tslint:disable-next-line:variable-name
-export const Stages = () => (
+export const Stages: React.FC = () => (
     <div className="stages">
         {stages.map(stage => (
             <div className="stage" key={stage.id}>

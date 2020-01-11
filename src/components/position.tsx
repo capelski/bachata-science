@@ -4,7 +4,7 @@ import { getInputSteps, getOutputSteps, getPositionSteps } from '../data/steps';
 import { StepPreview } from './step-preview';
 
 // tslint:disable-next-line:variable-name
-export const Position = (props: PositionProps) => {
+export const Position: React.FC<PositionProps> = props => {
     const position = getPosition(props.positionId);
     const inputSteps = getInputSteps(props.positionId);
     const outputSteps = getOutputSteps(props.positionId);

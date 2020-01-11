@@ -4,7 +4,7 @@ import { PositionPreview } from './position-preview';
 import { parseSearchText } from './shared';
 
 // tslint:disable-next-line:variable-name
-export const PositionsList = () => {
+export const PositionsList: React.FC = () => {
     const [positions, setPositions] = React.useState(allPositions);
 
     // TODO Debounce

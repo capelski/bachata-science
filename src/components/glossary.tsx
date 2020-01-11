@@ -1,7 +1,7 @@
 import React from 'react';
 
 // tslint:disable-next-line:variable-name
-export const Glossary = () => (
+export const Glossary: React.FC = () => (
     <React.Fragment>
         <h2>Glosario</h2>
 

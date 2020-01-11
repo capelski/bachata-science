@@ -4,7 +4,7 @@ import { PositionPreview } from './position-preview';
 import { StepPreview } from './step-preview';
 
 // tslint:disable-next-line:variable-name
-export const Step = (props: StepProps) => {
+export const Step: React.FC<StepProps> = props => {
     const step = getStep(props.stepId);
 
     return (
