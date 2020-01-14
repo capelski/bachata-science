@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { testIds } from '../../__step-definitions__/test-ids';
 import { testingGlobals } from '../../__step-definitions__/testing-globals';
 import { StepPreview } from '../step-preview';
-import { stepIdSentence } from './step-shared';
+import { stepIdSentence } from './step-shared.step';
 
 const renderStepPreviewSentence = 'rendering a step preview component for the step';
 When(renderStepPreviewSentence, () => {

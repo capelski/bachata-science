@@ -6,7 +6,7 @@ import * as steps from '../../data/steps';
 export const stepIdSentence = /(a step with id|with step id) "(.*)"/;
 Given(stepIdSentence, (_: string, stepId: steps.StepId) => {
     testingGlobals.step.id = stepId;
-    testingGlobals.stepStub = sinon
+    testingGlobals.getStepStub = sinon
         .stub(steps, 'getStep')
         .returns(testingGlobals.step as steps.Step);
 });
@@ -17,6 +17,6 @@ Given(stepNameSentence, (_: string, name: string) => {
 });
 
 After(() => {
-    testingGlobals.stepStub && testingGlobals.stepStub.restore();
+    testingGlobals.getStepStub && testingGlobals.getStepStub.restore();
     testingGlobals.step = {};
 });
