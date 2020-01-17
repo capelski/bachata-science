@@ -55,7 +55,13 @@ export const stages: Stage[] = [
     },
     {
         id: StageId.cinco,
-        steps: [StepId.vueltaBrazosCruzados, StepId.bufanda, StepId.lanzarBrazos, StepId.slide]
+        steps: [
+            StepId.vueltaArriba,
+            StepId.bufanda,
+            StepId.lanzarBrazos,
+            StepId.vueltaCintura,
+            StepId.slide
+        ]
     },
     {
         id: StageId.seis,
