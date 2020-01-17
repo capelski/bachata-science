@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { testIds } from '../__step-definitions__/test-ids';
-import { getStep, StepProps } from '../data/steps';
+import { getStep } from '../data/steps';
+import { StepProps } from '../types/steps';
 
 // tslint:disable-next-line:variable-name
 export const StepPreview: React.FC<StepProps> = props => {

@@ -1,7 +1,7 @@
 import { RenderResult } from '@testing-library/react';
 import { SinonStub } from 'sinon';
-import { Position } from '../data/positions';
-import { Step } from '../data/steps';
+import { Position } from '../types/positions';
+import { Step } from '../types/steps';
 
 export interface TestingGlobals {
     getPositionStub?: SinonStub;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { getStep, StepProps } from '../data/steps';
+import { getStep } from '../data/steps';
+import { StepProps } from '../types/steps';
 import { PositionPreview } from './position-preview';
 import { StepPreview } from './step-preview';
 

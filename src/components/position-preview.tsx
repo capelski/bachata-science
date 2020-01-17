@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { testIds } from '../__step-definitions__/test-ids';
-import { getPosition, PositionProps } from '../data/positions';
+import { getPosition } from '../data/positions';
+import { PositionProps } from '../types/positions';
 
 // tslint:disable-next-line:variable-name
 export const PositionPreview: React.FC<PositionProps> = props => {
