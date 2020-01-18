@@ -1,18 +1,24 @@
 import React from 'react';
-import { positions as allPositions } from '../data/positions';
+import { Position } from '../types/positions';
 import { PositionPreview } from './position-preview';
 import { parseSearchText } from './shared';
 
+interface PositionsListProps {
+    positions: Position[];
+}
+
 // tslint:disable-next-line:variable-name
-export const PositionsList: React.FC = () => {
-    const [positions, setPositions] = React.useState(allPositions);
+export const PositionsList: React.FC<PositionsListProps> = props => {
+    const [positions, setPositions] = React.useState(props.positions);
 
     // TODO Debounce
     const filterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const filter = event.target.value && parseSearchText(event.target.value);
         const filteredSteps = filter
-            ? allPositions.filter(position => parseSearchText(position.name).indexOf(filter) > -1)
-            : allPositions;
+            ? props.positions.filter(
+                  position => parseSearchText(position.name).indexOf(filter) > -1
+              )
+            : props.positions;
 
         setPositions(filteredSteps);
     };

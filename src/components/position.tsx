@@ -1,8 +1,12 @@
 import React from 'react';
 import { getPosition } from '../data/positions';
 import { getInputSteps, getOutputSteps, getPositionSteps } from '../data/steps';
-import { PositionProps } from '../types/positions';
+import { PositionId } from '../types/positions';
 import { StepPreview } from './step-preview';
+
+export interface PositionProps {
+    positionId: PositionId;
+}
 
 // tslint:disable-next-line:variable-name
 export const Position: React.FC<PositionProps> = props => {

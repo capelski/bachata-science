@@ -23,10 +23,6 @@ export interface Position {
     name: string;
 }
 
-export interface PositionProps {
-    positionId: PositionId;
-}
-
 export type PositionTransition =
     | PositionId
     | {

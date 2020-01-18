@@ -57,7 +57,3 @@ export interface Step {
     ticks: number;
     videoFile?: string;
 }
-
-export interface StepProps {
-    stepId: StepId;
-}

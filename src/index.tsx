@@ -8,6 +8,9 @@ import { PositionsList } from './components/positions-list';
 import { Stages } from './components/stages';
 import { Step } from './components/step';
 import { StepsList } from './components/steps-list';
+import { positions } from './data/positions';
+import { stages } from './data/stages';
+import { steps } from './data/steps';
 import './style/main.scss';
 
 interface ParametrizedRouteProps<T> {
@@ -54,16 +57,16 @@ const App = () => (
                     <ParametrizedRoute component={Position} parameterName="positionId" />
                 </Route>
                 <Route path="/positions">
-                    <PositionsList />
+                    <PositionsList positions={positions} />
                 </Route>
                 <Route path="/stages">
-                    <Stages />
+                    <Stages stages={stages} />
                 </Route>
                 <Route path="/step/:stepId">
                     <ParametrizedRoute component={Step} parameterName="stepId" />
                 </Route>
                 <Route path="/steps">
-                    <StepsList />
+                    <StepsList steps={steps} />
                 </Route>
                 <Route path="/">
                     <Home />
