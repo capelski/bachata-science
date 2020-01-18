@@ -23,7 +23,7 @@ When(renderPositionPreviewSentence, () => {
     }
 });
 
-Then('the position preview should contain a link to {string}', (linkHref: string) => {
+Then('the position preview contains a link to {string}', (linkHref: string) => {
     if (!testingGlobals.renderedComponents.positionPreview) {
         throw new Error(
             `You need to render a position preview with "${renderPositionPreviewSentence}" before using this sentence`
@@ -34,7 +34,7 @@ Then('the position preview should contain a link to {string}', (linkHref: string
     }
 });
 
-Then('the position preview should contain a link with text {string}', (linkText: string) => {
+Then('the position preview contains a link with text {string}', (linkText: string) => {
     if (!testingGlobals.renderedComponents.positionPreview) {
         throw new Error(
             `You need to render a position preview with "${renderPositionPreviewSentence}" before using this sentence`

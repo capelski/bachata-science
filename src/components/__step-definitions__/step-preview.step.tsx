@@ -23,7 +23,7 @@ When(renderStepPreviewSentence, () => {
     }
 });
 
-Then('the step preview should contain a link to {string}', (linkHref: string) => {
+Then('the step preview contains a link to {string}', (linkHref: string) => {
     if (!testingGlobals.renderedComponents.stepPreview) {
         throw new Error(
             `You need to render a step preview with "${renderStepPreviewSentence}" before using this sentence`
@@ -34,7 +34,7 @@ Then('the step preview should contain a link to {string}', (linkHref: string) =>
     }
 });
 
-Then('the step preview should contain a link with text {string}', (linkText: string) => {
+Then('the step preview contains a link with text {string}', (linkText: string) => {
     if (!testingGlobals.renderedComponents.stepPreview) {
         throw new Error(
             `You need to render a step preview with "${renderStepPreviewSentence}" before using this sentence`
