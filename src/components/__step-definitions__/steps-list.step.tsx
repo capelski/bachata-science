@@ -1,4 +1,4 @@
-import { getAllByTestId, render } from '@testing-library/react';
+import { fireEvent, getByTestId, render } from '@testing-library/react';
 import { expect } from 'chai';
 import { After, Then, When } from 'cucumber';
 import React from 'react';
@@ -17,13 +17,29 @@ When(renderStepsListSentence, () => {
     );
 });
 
+When('writing {string} in the steps filter', (filterText: string) => {
+    if (!testingGlobals.renderedComponents.stepsList) {
+        throw new Error(
+            `You need to render a steps list with "${renderStepsListSentence}" before using this sentence`
+        );
+    } else {
+        const filterElement = getByTestId(document.body, testIds.stepsList.filter);
+        fireEvent.change(filterElement, { target: { value: filterText } });
+    }
+});
+
 Then('the list contains {int} step preview components', (componentsNumber: number) => {
     if (!testingGlobals.renderedComponents.stepsList) {
         throw new Error(
             `You need to render a steps list with "${renderStepsListSentence}" before using this sentence`
         );
     } else {
-        const stepPreviews = getAllByTestId(document.body, testIds.stepPreview.link);
+        // getAllByTestId throws an error if no elements are found; using querySelectorAll instead
+        // const stepPreviews = getAllByTestId(document.body, testIds.stepPreview.link);
+
+        const stepPreviews = document.body.querySelectorAll(
+            `[data-testid="${testIds.stepPreview.link}"]`
+        );
         expect(stepPreviews).to.have.length(componentsNumber);
     }
 });

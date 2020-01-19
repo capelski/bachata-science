@@ -15,3 +15,16 @@ Feature: Positions
         Given the positions defined in "positions.json"
         When rendering a positions list component
         Then the list contains 2 position preview components
+
+    Scenario Outline: Positions list allows filtering positions by name
+        Given the positions defined in "positions.json"
+        When rendering a positions list component
+        And writing "<text>" in the positions filter
+        Then the list contains <resultsNumber> position preview components
+
+        Examples:
+            | text | resultsNumber |
+            | o    | 2             |
+            | one  | 1             |
+            | ONE  | 1             |
+            | abc  | 0             |

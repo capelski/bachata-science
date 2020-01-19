@@ -15,3 +15,16 @@ Feature: Steps
         Given the steps defined in "steps.json"
         When rendering a steps list component
         Then the list contains 3 step preview components
+
+    Scenario Outline: Steps list allows filtering steps by name
+        Given the steps defined in "steps.json"
+        When rendering a steps list component
+        And writing "<text>" in the steps filter
+        Then the list contains <resultsNumber> step preview components
+
+        Examples:
+            | text | resultsNumber |
+            | o    | 2             |
+            | one  | 1             |
+            | ONE  | 1             |
+            | abc  | 0             |

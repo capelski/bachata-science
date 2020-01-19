@@ -1,4 +1,5 @@
 import React from 'react';
+import { testIds } from '../__step-definitions__/test-ids';
 import { Position } from '../types/positions';
 import { PositionPreview } from './position-preview';
 import { parseSearchText } from './shared';
@@ -25,7 +26,8 @@ export const PositionsList: React.FC<PositionsListProps> = props => {
 
     return (
         <React.Fragment>
-            Buscar: <input type="text" onChange={filterChange} />
+            Buscar:{' '}
+            <input type="text" onChange={filterChange} data-testid={testIds.positionsList.filter} />
             <div className="positions-list">
                 {positions.map(position => (
                     <PositionPreview key={position.id} positionId={position.id} />
