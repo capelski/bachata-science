@@ -10,14 +10,14 @@ import { stepIdSentence } from './step-shared.step';
 
 const renderStepPreviewSentence = 'rendering a step preview component for the step';
 When(renderStepPreviewSentence, () => {
-    if (!testingGlobals.step.id) {
+    if (!testingGlobals.data.step.id) {
         throw new Error(
             `You need to define a step id with "${stepIdSentence}" before using the rendering`
         );
     } else {
         testingGlobals.renderedComponents.stepPreview = render(
             <BrowserRouter>
-                <StepPreview stepId={testingGlobals.step.id} />
+                <StepPreview stepId={testingGlobals.data.step.id} />
             </BrowserRouter>
         );
     }

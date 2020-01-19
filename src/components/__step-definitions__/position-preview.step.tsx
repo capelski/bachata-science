@@ -10,14 +10,14 @@ import { positionIdSentence } from './position-shared.step';
 
 const renderPositionPreviewSentence = 'rendering a position preview component for the position';
 When(renderPositionPreviewSentence, () => {
-    if (!testingGlobals.position.id) {
+    if (!testingGlobals.data.position.id) {
         throw new Error(
             `You need to define a position id with "${positionIdSentence}" before using the rendering`
         );
     } else {
         testingGlobals.renderedComponents.positionPreview = render(
             <BrowserRouter>
-                <PositionPreview positionId={testingGlobals.position.id} />
+                <PositionPreview positionId={testingGlobals.data.position.id} />
             </BrowserRouter>
         );
     }
