@@ -1,4 +1,17 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import './navbar.scss';
+
 $previewPadding: 10px;
+
+.container.custom-container {
+    min-height: 100%;
+    padding-top: calc(56px + 20px);
+
+    @include media-breakpoint-up(md) {
+        padding-top: calc(72px + 20px);
+    }
+}
 
 .positions-list,
 .steps-list {
@@ -14,7 +27,7 @@ $previewPadding: 10px;
     box-sizing: border-box;
 }
 
-@media(min-width: 768px) {
+@include media-breakpoint-up(sm) {
     .positions-list .position-preview,
     .steps-list .step-preview {
         flex: 0 0 50%;
@@ -27,12 +40,12 @@ $previewPadding: 10px;
     }
 
     .positions-list .position-preview:nth-child(2n),
-    .steps-list .step-preview:nth-child(2n)  {
+    .steps-list .step-preview:nth-child(2n) {
         padding-right: 0;
     }
 }
 
-@media(min-width: 992px) {
+@include media-breakpoint-up(md) {
     .positions-list .position-preview,
     .steps-list .step-preview {
         flex: 0 0 25%;
@@ -44,7 +57,7 @@ $previewPadding: 10px;
     }
 
     .positions-list .position-preview:nth-child(2n),
-    .steps-list .step-preview:nth-child(2n)  {
+    .steps-list .step-preview:nth-child(2n) {
         padding-right: $previewPadding;
     }
 
@@ -54,7 +67,7 @@ $previewPadding: 10px;
     }
 
     .positions-list .position-preview:nth-child(4n),
-    .steps-list .step-preview:nth-child(4n)  {
+    .steps-list .step-preview:nth-child(4n) {
         padding-right: 0;
     }
 }

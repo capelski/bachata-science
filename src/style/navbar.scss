@@ -1,0 +1,46 @@
+.navbar.custom-navbar {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+
+    .navbar-brand {
+        color: $white;
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+
+        li.nav-item {
+            a.nav-link {
+                color: $white;
+
+                &:hover,
+                &.active {
+                    color: #cccccc;
+                }
+
+                &:active,
+                &:focus {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .navbar.custom-navbar {
+        .navbar-nav {
+            margin-top: 0;
+        }
+
+        .navbar-nav > li.nav-item > a.nav-link.active {
+            color: $white;
+
+            &:active,
+            &:focus,
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

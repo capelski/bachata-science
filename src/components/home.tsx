@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 // tslint:disable-next-line:variable-name
 export const Home: React.FC = () => (
     <React.Fragment>
-        <h1>Bachata Science</h1>
-
         <p>
             Esta página pretende ser un catalogo de los pasos mas comunes de bachata, para recordar
             como se hacen, enseñarlos y sobretodo, establecer un nombre único para cada uno. Puede
