@@ -12,7 +12,7 @@ const renderStepsListSentence = 'rendering a steps list component';
 When(renderStepsListSentence, () => {
     testingGlobals.renderedComponents.stepsList = render(
         <BrowserRouter>
-            <StepsList steps={testingGlobals.data.stepsList as Step[]} />
+            <StepsList renderSearcher={true} steps={testingGlobals.data.stepsList as Step[]} />
         </BrowserRouter>
     );
 });

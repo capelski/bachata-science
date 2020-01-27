@@ -51,7 +51,7 @@ const App = () => (
                         <ParametrizedRoute component={Step} parameterName="stepId" />
                     </Route>
                     <Route path="/steps">
-                        <StepsList steps={steps} />
+                        <StepsList renderSearcher={true} steps={steps} />
                     </Route>
                     <Route path="/">
                         <Home />

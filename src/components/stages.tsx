@@ -1,6 +1,7 @@
 import React from 'react';
+import { getStep } from '../data/steps';
 import { Stage } from '../types/stages';
-import { StepPreview } from './step-preview';
+import { StepsList } from './steps-list';
 
 interface StagesProps {
     stages: Stage[];
@@ -12,11 +13,7 @@ export const Stages: React.FC<StagesProps> = props => (
         {props.stages.map(stage => (
             <div className="stage" key={stage.id}>
                 <h3>Fase {stage.id}</h3>
-                <div className="steps-list">
-                    {stage.steps.map(stepId => (
-                        <StepPreview key={stepId} stepId={stepId} />
-                    ))}
-                </div>
+                <StepsList steps={stage.steps.map(getStep)} />
             </div>
         ))}
     </div>

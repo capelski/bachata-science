@@ -5,6 +5,7 @@ import { parseSearchText } from './shared';
 import { StepPreview } from './step-preview';
 
 interface StepsListProps {
+    renderSearcher?: boolean;
     steps: Step[];
 }
 
@@ -24,8 +25,16 @@ export const StepsList: React.FC<StepsListProps> = props => {
 
     return (
         <React.Fragment>
-            Buscar:{' '}
-            <input type="text" onChange={filterChange} data-testid={testIds.stepsList.filter} />
+            {props.renderSearcher && (
+                <React.Fragment>
+                    Buscar:{' '}
+                    <input
+                        type="text"
+                        onChange={filterChange}
+                        data-testid={testIds.stepsList.filter}
+                    />
+                </React.Fragment>
+            )}
             <div className="steps-list">
                 {steps.map(step => (
                     <StepPreview key={step.id} stepId={step.id} />
