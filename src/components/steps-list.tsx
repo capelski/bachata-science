@@ -15,11 +15,10 @@ export const StepsList: React.FC<StepsListProps> = props => {
 
     // TODO Debounce
     const filterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const filter = event.target.value && parseSearchText(event.target.value);
-        const filteredSteps = filter
-            ? props.steps.filter(step => parseSearchText(step.name).indexOf(filter) > -1)
-            : props.steps;
-
+        const filter = parseSearchText(event.target.value);
+        const filteredSteps = props.steps.filter(
+            step => parseSearchText(step.name).indexOf(filter) > -1
+        );
         setSteps(filteredSteps);
     };
 

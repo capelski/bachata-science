@@ -28,3 +28,4 @@ Feature: Positions
             | one  | 1             |
             | ONE  | 1             |
             | abc  | 0             |
+            |      | 2             |

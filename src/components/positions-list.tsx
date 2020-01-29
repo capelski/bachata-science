@@ -14,13 +14,10 @@ export const PositionsList: React.FC<PositionsListProps> = props => {
 
     // TODO Debounce
     const filterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const filter = event.target.value && parseSearchText(event.target.value);
-        const filteredSteps = filter
-            ? props.positions.filter(
-                  position => parseSearchText(position.name).indexOf(filter) > -1
-              )
-            : props.positions;
-
+        const filter = parseSearchText(event.target.value);
+        const filteredSteps = props.positions.filter(
+            position => parseSearchText(position.name).indexOf(filter) > -1
+        );
         setPositions(filteredSteps);
     };
 

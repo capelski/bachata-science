@@ -28,3 +28,4 @@ Feature: Steps
             | one  | 1             |
             | ONE  | 1             |
             | abc  | 0             |
+            |      | 3             |
