@@ -1,0 +1,11 @@
+{
+    "cache": false,
+    "check-coverage": false,
+    "extension": [".ts", ".tsx"],
+    "include": ["src/components/*.ts", "src/components/*.tsx"],
+    "exclude": ["__step-definitions__/"],
+    "sourceMap": true,
+    "reporter": ["html", "text", "text-summary"],
+    "all": true,
+    "instrument": true
+}
