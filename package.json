@@ -37,6 +37,8 @@
         "react-router-dom": "5.1.2"
     },
     "devDependencies": {
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
         "@testing-library/react": "9.4.0",
         "@types/chai": "4.2.7",
         "@types/cucumber": "6.0.0",
@@ -69,7 +71,10 @@
         "webpack-dev-server": "3.10.1"
     },
     "husky": {
-        "pre-commit": "npm run lint && npm run prettier",
-        "pre-push": "npm test"
+        "hooks": {
+            "pre-commit": "npm run lint && npm run prettier",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-push": "npm test"
+        }
     }
 }
