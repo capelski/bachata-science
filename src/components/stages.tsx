@@ -3,6 +3,7 @@ import { getStep } from '../data/steps';
 import { Stage } from '../types/stages';
 import { StepsList } from './steps-list';
 
+// TODO Test this component
 interface StagesProps {
     stages: Stage[];
 }

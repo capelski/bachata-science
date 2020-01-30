@@ -21,6 +21,7 @@ export const PositionsList: React.FC<PositionsListProps> = props => {
         setPositions(filteredSteps);
     };
 
+    // TODO Display no results found message if no steps. TEST
     return (
         <React.Fragment>
             Buscar:{' '}

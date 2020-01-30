@@ -8,6 +8,8 @@ export interface PositionProps {
     positionId: PositionId;
 }
 
+// TODO Test this component
+
 // tslint:disable-next-line:variable-name
 export const Position: React.FC<PositionProps> = props => {
     const position = getPosition(props.positionId);

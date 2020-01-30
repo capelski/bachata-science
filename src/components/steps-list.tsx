@@ -22,6 +22,7 @@ export const StepsList: React.FC<StepsListProps> = props => {
         setSteps(filteredSteps);
     };
 
+    // TODO Display no results found message if no steps. TEST
     return (
         <React.Fragment>
             {props.renderSearcher && (
