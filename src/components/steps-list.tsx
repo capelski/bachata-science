@@ -22,7 +22,6 @@ export const StepsList: React.FC<StepsListProps> = props => {
         setSteps(filteredSteps);
     };
 
-    // TODO Display no results found message if no steps. TEST
     return (
         <React.Fragment>
             {props.renderSearcher && (
@@ -36,6 +35,11 @@ export const StepsList: React.FC<StepsListProps> = props => {
                 </React.Fragment>
             )}
             <div className="steps-list">
+                {steps.length === 0 && (
+                    <div className="no-results-found" data-testid={testIds.stepsList.noStepsFound}>
+                        Ningún paso coincide con el texto que buscas
+                    </div>
+                )}
                 {steps.map(step => (
                     <StepPreview key={step.id} stepId={step.id} />
                 ))}

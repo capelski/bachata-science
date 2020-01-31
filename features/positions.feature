@@ -29,3 +29,9 @@ Feature: Positions
             | ONE  | 1             |
             | abc  | 0             |
             |      | 2             |
+
+    Scenario: Positions list displays a message when no results match the filter
+        Given the positions defined in "positions.json"
+        When rendering a positions list component
+        And writing "no matching text" in the positions filter
+        Then a no positions found message is displayed in the list

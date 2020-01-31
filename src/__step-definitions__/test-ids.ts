@@ -3,12 +3,14 @@ export const testIds = {
         link: 'position-preview-link'
     },
     positionsList: {
-        filter: 'positions-list-filter'
+        filter: 'positions-list-filter',
+        noPositionsFound: 'no-positions-found'
     },
     stepPreview: {
         link: 'step-preview-link'
     },
     stepsList: {
-        filter: 'steps-list-filter'
+        filter: 'steps-list-filter',
+        noStepsFound: 'no-steps-found'
     }
 };

@@ -44,6 +44,17 @@ Then('the list contains {int} step preview components', (componentsNumber: numbe
     }
 });
 
+Then('a no steps found message is displayed in the list', () => {
+    if (!testingGlobals.renderedComponents.stepsList) {
+        throw new Error(
+            `You need to render a steps list with "${renderStepsListSentence}" before using this sentence`
+        );
+    } else {
+        const noResultsFoundMessage = getByTestId(document.body, testIds.stepsList.noStepsFound);
+        expect(noResultsFoundMessage).not.to.equal(undefined);
+    }
+});
+
 After(() => {
     testingGlobals.renderedComponents.stepsList = undefined;
 });

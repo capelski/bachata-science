@@ -21,12 +21,19 @@ export const PositionsList: React.FC<PositionsListProps> = props => {
         setPositions(filteredSteps);
     };
 
-    // TODO Display no results found message if no steps. TEST
     return (
         <React.Fragment>
             Buscar:{' '}
             <input type="text" onChange={filterChange} data-testid={testIds.positionsList.filter} />
             <div className="positions-list">
+                {positions.length === 0 && (
+                    <div
+                        className="no-results-found"
+                        data-testid={testIds.positionsList.noPositionsFound}
+                    >
+                        Ninguna posición coincide con el texto que buscas
+                    </div>
+                )}
                 {positions.map(position => (
                     <PositionPreview key={position.id} positionId={position.id} />
                 ))}

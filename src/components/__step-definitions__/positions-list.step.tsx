@@ -44,6 +44,20 @@ Then('the list contains {int} position preview components', (componentsNumber: n
     }
 });
 
+Then('a no positions found message is displayed in the list', () => {
+    if (!testingGlobals.renderedComponents.positionsList) {
+        throw new Error(
+            `You need to render a positions list with "${renderPositionsListSentence}" before using this sentence`
+        );
+    } else {
+        const noResultsFoundMessage = getByTestId(
+            document.body,
+            testIds.positionsList.noPositionsFound
+        );
+        expect(noResultsFoundMessage).not.to.equal(undefined);
+    }
+});
+
 After(() => {
     testingGlobals.renderedComponents.positionsList = undefined;
 });

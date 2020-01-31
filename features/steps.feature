@@ -29,3 +29,9 @@ Feature: Steps
             | ONE  | 1             |
             | abc  | 0             |
             |      | 3             |
+
+    Scenario: Steps list displays a message when no results match the filter
+        Given the steps defined in "steps.json"
+        When rendering a steps list component
+        And writing "no matching text" in the steps filter
+        Then a no steps found message is displayed in the list
