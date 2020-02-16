@@ -9,8 +9,6 @@
         "clean:build": "rm -rf dist",
         "clean:dependencies": "rm -rf node_modules/ package-lock.json",
         "coverage": "nyc npm run test",
-        "lint": "tslint -e 'node_modules/**' -p .",
-        "lint:fix": "tslint -e 'node_modules/**' -p . --fix",
         "prettier": "prettier --list-different \"src/**/*.{ts,tsx}\"",
         "prettier:fix": "prettier --write \"src/**/*.{ts,tsx}\"",
         "start": "node index.js",
@@ -62,9 +60,6 @@
         "sinon": "8.0.4",
         "style-loader": "1.1.2",
         "ts-node": "8.6.0",
-        "tslint": "5.20.1",
-        "tslint-config-prettier": "1.18.0",
-        "tslint-react": "4.1.0",
         "typescript": "3.7.4",
         "webpack": "4.41.5",
         "webpack-cli": "3.3.10",
@@ -72,7 +67,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run lint && npm run prettier",
+            "pre-commit": "npm run prettier",
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
             "pre-push": "npm test"
         }

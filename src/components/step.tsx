@@ -10,7 +10,6 @@ export interface StepProps {
 
 // TODO Test this component
 
-// tslint:disable-next-line:variable-name
 export const Step: React.FC<StepProps> = props => {
     const step = getStep(props.stepId);
 

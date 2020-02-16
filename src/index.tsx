@@ -28,7 +28,6 @@ function ParametrizedRoute<T>(props: ParametrizedRouteProps<T>) {
     return props.component(componentProps);
 }
 
-// tslint:disable-next-line:variable-name
 const App = () => (
     <BrowserRouter>
         <div>

@@ -9,7 +9,6 @@ interface StepsListProps {
     steps: Step[];
 }
 
-// tslint:disable-next-line:variable-name
 export const StepsList: React.FC<StepsListProps> = props => {
     const [steps, setSteps] = React.useState(props.steps);
 

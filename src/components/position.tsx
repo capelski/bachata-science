@@ -10,7 +10,6 @@ export interface PositionProps {
 
 // TODO Test this component
 
-// tslint:disable-next-line:variable-name
 export const Position: React.FC<PositionProps> = props => {
     const position = getPosition(props.positionId);
     const inputSteps = getInputSteps(props.positionId);

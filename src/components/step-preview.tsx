@@ -8,7 +8,6 @@ export interface StepPreviewProps {
     stepId: StepId;
 }
 
-// tslint:disable-next-line:variable-name
 export const StepPreview: React.FC<StepPreviewProps> = props => {
     const step = getStep(props.stepId);
     return (

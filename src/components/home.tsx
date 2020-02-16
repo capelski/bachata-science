@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// tslint:disable-next-line:variable-name
 export const Home: React.FC = () => (
     <React.Fragment>
         <p>

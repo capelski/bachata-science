@@ -8,7 +8,6 @@ export interface PositionPreviewProps {
     positionId: PositionId;
 }
 
-// tslint:disable-next-line:variable-name
 export const PositionPreview: React.FC<PositionPreviewProps> = props => {
     const position = getPosition(props.positionId);
     return (

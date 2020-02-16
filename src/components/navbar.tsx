@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// tslint:disable-next-line:variable-name
 export const Navbar: React.FC = () => (
     <nav className="navbar navbar-expand-md fixed-top custom-navbar bg-primary">
         <div className="container">

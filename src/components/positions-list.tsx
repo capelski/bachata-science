@@ -8,7 +8,6 @@ interface PositionsListProps {
     positions: Position[];
 }
 
-// tslint:disable-next-line:variable-name
 export const PositionsList: React.FC<PositionsListProps> = props => {
     const [positions, setPositions] = React.useState(props.positions);
 

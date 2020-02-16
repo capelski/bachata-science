@@ -8,7 +8,6 @@ interface StagesProps {
     stages: Stage[];
 }
 
-// tslint:disable-next-line:variable-name
 export const Stages: React.FC<StagesProps> = props => (
     <div className="stages">
         {props.stages.map(stage => (
