@@ -1,7 +1,7 @@
-import React from 'react';
 import { getStep } from '../data/steps';
 import { Stage } from '../types/stages';
 import { StepsList } from './steps-list';
+import React from 'react';
 
 // TODO Test this component
 interface StagesProps {

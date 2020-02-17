@@ -1,8 +1,8 @@
-import React from 'react';
 import { testIds } from '../__step-definitions__/test-ids';
 import { Step } from '../types/steps';
 import { parseSearchText } from './shared';
 import { StepPreview } from './step-preview';
+import React from 'react';
 
 interface StepsListProps {
     renderSearcher?: boolean;

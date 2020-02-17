@@ -1,12 +1,12 @@
+import { testIds } from '../../__step-definitions__/test-ids';
+import { testingGlobals } from '../../__step-definitions__/testing-globals';
+import { StepPreview } from '../step-preview';
+import { stepIdSentence } from './step-shared.step';
 import { getByTestId, render } from '@testing-library/react';
 import { expect } from 'chai';
 import { After, Then, When } from 'cucumber';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { testIds } from '../../__step-definitions__/test-ids';
-import { testingGlobals } from '../../__step-definitions__/testing-globals';
-import { StepPreview } from '../step-preview';
-import { stepIdSentence } from './step-shared.step';
 
 const renderStepPreviewSentence = 'rendering a step preview component for the step';
 When(renderStepPreviewSentence, () => {

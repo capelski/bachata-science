@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { testIds } from '../__step-definitions__/test-ids';
 import { getStep } from '../data/steps';
 import { StepId } from '../types/steps';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export interface StepPreviewProps {
     stepId: StepId;

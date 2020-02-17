@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { testIds } from '../__step-definitions__/test-ids';
 import { getPosition } from '../data/positions';
 import { PositionId } from '../types/positions';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export interface PositionPreviewProps {
     positionId: PositionId;

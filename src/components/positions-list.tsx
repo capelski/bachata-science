@@ -1,8 +1,8 @@
-import React from 'react';
 import { testIds } from '../__step-definitions__/test-ids';
 import { Position } from '../types/positions';
 import { PositionPreview } from './position-preview';
 import { parseSearchText } from './shared';
+import React from 'react';
 
 interface PositionsListProps {
     positions: Position[];

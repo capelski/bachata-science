@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch, useParams } from 'react-router-dom';
 import { Glossary } from './components/glossary';
 import { Home } from './components/home';
 import { Navbar } from './components/navbar';
@@ -12,6 +9,9 @@ import { StepsList } from './components/steps-list';
 import { positions } from './data/positions';
 import { stages } from './data/stages';
 import { steps } from './data/steps';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch, useParams } from 'react-router-dom';
 
 import 'bootstrap';
 import './style/main.scss';

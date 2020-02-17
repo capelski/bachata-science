@@ -1,10 +1,10 @@
-import { After, Given } from 'cucumber';
 import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
-import sinon from 'sinon';
 import { testingGlobals } from '../../__step-definitions__/testing-globals';
 import * as positions from '../../data/positions';
 import { Position, PositionId } from '../../types/positions';
+import { After, Given } from 'cucumber';
+import sinon from 'sinon';
 
 export const positionIdSentence = /(a position with id|with position id) "(.*)"/;
 Given(positionIdSentence, (_: string, positionId: PositionId) => {

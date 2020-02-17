@@ -1,8 +1,8 @@
-import React from 'react';
 import { getPosition } from '../data/positions';
 import { getInputSteps, getOutputSteps, getPositionSteps } from '../data/steps';
 import { PositionId } from '../types/positions';
 import { StepPreview } from './step-preview';
+import React from 'react';
 
 export interface PositionProps {
     positionId: PositionId;

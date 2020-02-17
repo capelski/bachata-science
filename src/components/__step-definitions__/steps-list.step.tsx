@@ -1,12 +1,12 @@
+import { testIds } from '../../__step-definitions__/test-ids';
+import { testingGlobals } from '../../__step-definitions__/testing-globals';
+import { Step } from '../../types/steps';
+import { StepsList } from '../steps-list';
 import { fireEvent, getByTestId, render } from '@testing-library/react';
 import { expect } from 'chai';
 import { After, Then, When } from 'cucumber';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { testIds } from '../../__step-definitions__/test-ids';
-import { testingGlobals } from '../../__step-definitions__/testing-globals';
-import { Step } from '../../types/steps';
-import { StepsList } from '../steps-list';
 
 const renderStepsListSentence = 'rendering a steps list component';
 When(renderStepsListSentence, () => {

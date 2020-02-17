@@ -1,8 +1,8 @@
-import React from 'react';
 import { getStep } from '../data/steps';
 import { StepId } from '../types/steps';
 import { PositionPreview } from './position-preview';
 import { StepPreview } from './step-preview';
+import React from 'react';
 
 export interface StepProps {
     stepId: StepId;
@@ -29,7 +29,7 @@ export const Step: React.FC<StepProps> = props => {
                     </div>
                 ) : (
                     <div key={index}>
-                        <PositionPreview positionId={position.starting} /> =>{' '}
+                        <PositionPreview positionId={position.starting} /> =&gt;{' '}
                         <PositionPreview positionId={position.ending} />
                     </div>
                 )
