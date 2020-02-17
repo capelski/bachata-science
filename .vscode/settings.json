@@ -1,5 +1,5 @@
 {
-    "cSpell.words": [
-        "bachata"
-    ]
+    "cSpell.words": ["bachata"],
+    "editor.formatOnSave": true,
+    "eslint.format.enable": true
 }
