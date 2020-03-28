@@ -17,7 +17,7 @@ export const StepPreview: React.FC<StepPreviewProps> = props => {
             data-testid={testIds.stepPreview.link}
         >
             {step.name}
-            {!step.videoFile && <span> (🚫📹)</span>}
+            {!step.videoFile && <span> (📹❌)</span>}
         </Link>
     );
 };

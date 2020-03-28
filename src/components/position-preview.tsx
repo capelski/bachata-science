@@ -17,6 +17,7 @@ export const PositionPreview: React.FC<PositionPreviewProps> = props => {
             data-testid={testIds.positionPreview.link}
         >
             {position.name}
+            {!position.imageFile && <span> (📸❌)</span>}
         </Link>
     );
 };

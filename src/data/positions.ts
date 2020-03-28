@@ -2,23 +2,23 @@ import { Position, PositionId } from '../types/positions';
 
 export const positions: Position[] = [
     {
-        id: PositionId.abierta,
-        name: 'Abierta'
+        id: PositionId.abiertaDosManos,
+        imageFile: 'abierta-dos-manos.jpg',
+        name: 'Abierta con dos manos'
+    },
+    {
+        id: PositionId.abiertaUnaMano,
+        imageFile: 'abierta-una-mano.jpg',
+        name: 'Abierta con una mano'
     },
     {
         id: PositionId.ampersand,
+        imageFile: 'ampersand.jpg',
         name: 'Ampersand'
     },
     {
-        id: PositionId.arrastre,
-        name: 'Arrastre'
-    },
-    {
-        id: PositionId.avance,
-        name: 'Avance'
-    },
-    {
         id: PositionId.brazosCruzados,
+        imageFile: 'brazos-cruzados.jpg',
         name: 'Brazos cruzados'
     },
     {
@@ -31,6 +31,7 @@ export const positions: Position[] = [
     },
     {
         id: PositionId.enrosqueCintura,
+        imageFile: 'enrosque-cintura.jpg',
         name: 'Enrosque de cintura'
     },
     {
@@ -39,6 +40,7 @@ export const positions: Position[] = [
     },
     {
         id: PositionId.iman,
+        imageFile: 'iman.jpg',
         name: 'Iman'
     },
     {

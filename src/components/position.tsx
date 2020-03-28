@@ -19,11 +19,15 @@ export const Position: React.FC<PositionProps> = props => {
     return (
         <div className="position">
             <h3>Posición: {position.name}</h3>
-            <div className="thumbnail">👫📷</div>
-            <p>
-                {position.description ||
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat interdum dictum. Suspendisse iaculis vel purus nec euismod. Donec iaculis dictum orci et acu...'}
-            </p>
+
+            {position.imageFile && (
+                <img
+                    className="image-resource"
+                    src={`/images/${position.imageFile}?$modena=bachata-science`}
+                />
+            )}
+
+            {position.description && <p>{position.description}</p>}
 
             <h4>Pasos de entrada</h4>
             {inputSteps.length > 0 ? (

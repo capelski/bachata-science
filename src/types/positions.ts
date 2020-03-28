@@ -1,8 +1,7 @@
 export enum PositionId {
-    abierta = 'abierta',
+    abiertaDosManos = 'abierta-dos-manos',
+    abiertaUnaMano = 'abierta-una-mano',
     ampersand = 'ampersand',
-    arrastre = 'arrastre',
-    avance = 'avance',
     brazosCruzados = 'brazos-cruzados',
     cerradaDosManos = 'cerrada-dos-manos',
     cerradaUnaMano = 'cerrada-una-mano',
@@ -20,6 +19,7 @@ export enum PositionId {
 export interface Position {
     description?: string;
     id: PositionId;
+    imageFile?: string;
     name: string;
 }
 

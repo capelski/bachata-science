@@ -23,7 +23,7 @@ export const steps: Step[] = [
         id: StepId.basicoFrontal,
         name: 'Basico frontal',
         positions: [
-            PositionId.abierta,
+            PositionId.abiertaDosManos,
             PositionId.ampersand,
             PositionId.cerradaDosManos,
             PositionId.cerradaUnaMano
@@ -37,7 +37,7 @@ export const steps: Step[] = [
         id: StepId.basicoLateral,
         name: 'Basico lateral',
         positions: [
-            PositionId.abierta,
+            PositionId.abiertaDosManos,
             PositionId.ampersand,
             PositionId.cerradaDosManos,
             PositionId.cerradaUnaMano
@@ -48,7 +48,7 @@ export const steps: Step[] = [
     {
         id: StepId.basicoMadrid,
         name: 'Basico madrid',
-        positions: [PositionId.abierta],
+        positions: [PositionId.abiertaDosManos],
         ticks: 8,
         videoFile: 'basico-madrid'
     },
@@ -97,7 +97,7 @@ export const steps: Step[] = [
         name: 'Cuadrado',
         positions: [
             PositionId.ampersand,
-            PositionId.abierta,
+            PositionId.abiertaDosManos,
             PositionId.cerradaDosManos,
             PositionId.cerradaUnaMano
         ],
@@ -110,8 +110,8 @@ export const steps: Step[] = [
         id: StepId.desconexion,
         name: 'Desconexión',
         positions: [
-            { ending: PositionId.abierta, starting: PositionId.cerradaDosManos },
-            { ending: PositionId.abierta, starting: PositionId.cerradaUnaMano }
+            { ending: PositionId.abiertaDosManos, starting: PositionId.cerradaDosManos },
+            { ending: PositionId.abiertaDosManos, starting: PositionId.cerradaUnaMano }
         ],
         ticks: 4
     },
@@ -121,14 +121,14 @@ export const steps: Step[] = [
             'Movimiento inverso al enrosque de cintura, en el que el leader marca la vuelta de salida con la mano de avance sin soltar la mano de la cintura del follower. También se puede hacer soltando la mano de avance y marcando la vuelta de salida del enrosque con la mano de la cintura',
         id: StepId.desnrosqueCintura,
         name: 'Desnrosque de cintura',
-        positions: [{ ending: PositionId.abierta, starting: PositionId.enrosqueCintura }],
+        positions: [{ ending: PositionId.abiertaDosManos, starting: PositionId.enrosqueCintura }],
         ticks: 4,
         videoFile: 'enrosque-cintura'
     },
     {
         id: StepId.desnrosqueCuello,
         name: 'Desnrosque de cuello',
-        positions: [{ ending: PositionId.abierta, starting: PositionId.enrosqueCuello }],
+        positions: [{ ending: PositionId.abiertaDosManos, starting: PositionId.enrosqueCuello }],
         ticks: 4,
         videoFile: 'enrosque-cuello'
     },
@@ -145,7 +145,7 @@ export const steps: Step[] = [
         id: StepId.enrosqueCintura,
         name: 'Enrosque de cintura',
         positions: [
-            { ending: PositionId.enrosqueCintura, starting: PositionId.abierta },
+            { ending: PositionId.enrosqueCintura, starting: PositionId.abiertaDosManos },
             { ending: PositionId.enrosqueCintura, starting: PositionId.cerradaUnaMano }
         ],
         ticks: 4,
@@ -154,14 +154,14 @@ export const steps: Step[] = [
     {
         id: StepId.enrosqueCuello,
         name: 'Enrosque de cuello',
-        positions: [{ ending: PositionId.enrosqueCuello, starting: PositionId.avance }],
+        positions: [{ ending: PositionId.enrosqueCuello, starting: PositionId.abiertaUnaMano }],
         ticks: 4,
         videoFile: 'enrosque-cuello'
     },
     {
         id: StepId.flecha,
         name: 'Flecha',
-        positions: [{ ending: PositionId.ampersand, starting: PositionId.abierta }],
+        positions: [{ ending: PositionId.ampersand, starting: PositionId.abiertaDosManos }],
         ticks: 4,
         videoFile: 'flecha'
     },
@@ -177,9 +177,9 @@ export const steps: Step[] = [
         name: 'Lanzar brazos',
         positions: [
             { ending: PositionId.cerradaDosManos, starting: PositionId.brazosCruzados },
-            { ending: PositionId.cerradaDosManos, starting: PositionId.abierta },
+            { ending: PositionId.cerradaDosManos, starting: PositionId.abiertaDosManos },
             { ending: PositionId.manosCintura, starting: PositionId.brazosCruzados },
-            { ending: PositionId.manosCintura, starting: PositionId.abierta }
+            { ending: PositionId.manosCintura, starting: PositionId.abiertaDosManos }
         ],
         ticks: 4,
         videoFile: 'lanzar-brazos'
@@ -201,7 +201,7 @@ export const steps: Step[] = [
     {
         id: StepId.molinillo,
         name: 'Molinillo',
-        positions: [{ ending: PositionId.cerradaUnaMano, starting: PositionId.abierta }],
+        positions: [{ ending: PositionId.cerradaUnaMano, starting: PositionId.abiertaDosManos }],
         ticks: 8,
         videoFile: 'molinillo'
     },
@@ -232,7 +232,7 @@ export const steps: Step[] = [
             'Serpentina doble, desplazando un brazo en los dos primeros tiempos y el otro brazo en los dos ultimos',
         id: StepId.parabrisas,
         name: 'Parabrisas',
-        positions: [{ ending: PositionId.cerradaDosManos, starting: PositionId.abierta }],
+        positions: [{ ending: PositionId.cerradaDosManos, starting: PositionId.abiertaDosManos }],
         ticks: 4,
         videoFile: 'parabrisas'
     },
@@ -240,14 +240,14 @@ export const steps: Step[] = [
         // TODO a.k.a. abre y cierra
         id: StepId.pasoPico,
         name: 'Paso y pico',
-        positions: [PositionId.abierta],
+        positions: [PositionId.abiertaDosManos],
         ticks: 8,
         videoFile: 'paso-pico'
     },
     {
         id: StepId.peinadoFollower,
         name: 'Peinado follower',
-        positions: [{ ending: PositionId.arrastre, starting: PositionId.iman }],
+        positions: [{ ending: PositionId.s, starting: PositionId.iman }],
         ticks: 4,
         videoFile: 'peinado-follower'
     },
@@ -267,7 +267,7 @@ export const steps: Step[] = [
         id: StepId.serpentina,
         name: 'Serpentina',
         positions: [
-            { ending: PositionId.cerradaUnaMano, starting: PositionId.abierta },
+            { ending: PositionId.cerradaUnaMano, starting: PositionId.abiertaDosManos },
             { ending: PositionId.cerradaDosManos, starting: PositionId.cerradaUnaMano }
         ],
         ticks: 4
@@ -303,7 +303,11 @@ export const steps: Step[] = [
         positions: [
             {
                 ending: PositionId.s,
-                starting: PositionId.abierta
+                starting: PositionId.abiertaUnaMano
+            },
+            {
+                ending: PositionId.s,
+                starting: PositionId.abiertaDosManos
             }
         ],
         ticks: 4
@@ -314,7 +318,7 @@ export const steps: Step[] = [
         id: StepId.vueltaArriba,
         name: 'Vuelta por arriba',
         positions: [
-            { ending: PositionId.brazosCruzados, starting: PositionId.abierta },
+            { ending: PositionId.brazosCruzados, starting: PositionId.abiertaDosManos },
             PositionId.brazosCruzados,
             { ending: PositionId.brazosCruzados, starting: PositionId.s }
         ],
@@ -323,7 +327,9 @@ export const steps: Step[] = [
     {
         id: StepId.vueltaBaldufa,
         name: 'Vuelta de baldufa',
-        positions: [{ ending: PositionId.manoEspaldaFollower, starting: PositionId.abierta }],
+        positions: [
+            { ending: PositionId.manoEspaldaFollower, starting: PositionId.abiertaDosManos }
+        ],
         ticks: 4,
         videoFile: 'vuelta-baldufa'
     },
@@ -332,7 +338,7 @@ export const steps: Step[] = [
             'El leader suelta la mano de avance en el primer tiempo y empieza una vuelta. Cuando el leader esta de espaldas al follower (en el segundo/tercer tiempo), coge la mano de arrastre del follower con su mano de avance, antes de completar la vuelta. El follower se desplaza con un basico lateral',
         id: StepId.vueltaCambioMano,
         name: 'Vuelta con cambio de mano',
-        positions: [{ ending: PositionId.s, starting: PositionId.abierta }],
+        positions: [{ ending: PositionId.s, starting: PositionId.abiertaDosManos }],
         ticks: 4
     },
     {
@@ -354,7 +360,7 @@ export const steps: Step[] = [
     {
         id: StepId.vueltaFinta,
         name: 'Vuelta con finta',
-        positions: [{ ending: PositionId.cerradaUnaMano, starting: PositionId.avance }],
+        positions: [{ ending: PositionId.cerradaUnaMano, starting: PositionId.abiertaUnaMano }],
         ticks: 4,
         videoFile: 'vuelta-finta'
     },
@@ -366,7 +372,11 @@ export const steps: Step[] = [
         positions: [
             {
                 ending: PositionId.s,
-                starting: PositionId.abierta
+                starting: PositionId.abiertaDosManos
+            },
+            {
+                ending: PositionId.s,
+                starting: PositionId.abiertaUnaMano
             }
         ],
         ticks: 4,
@@ -375,7 +385,7 @@ export const steps: Step[] = [
     {
         id: StepId.vueltaMuelle,
         name: 'Vuelta de muelle',
-        positions: [{ ending: PositionId.iman, starting: PositionId.abierta }],
+        positions: [{ ending: PositionId.iman, starting: PositionId.abiertaDosManos }],
         ticks: 4,
         videoFile: 'vuelta-muelle'
     },
@@ -384,14 +394,14 @@ export const steps: Step[] = [
             'El leader suelta la mano de avance y marca una vuelta al follower con la mano de arrastre, poniendola palma con palma con la mano del follower, en una posición similar a la de mirar el reloj. Cuando es el leader quien da la vuelta, no se la marca al follower',
         id: StepId.vueltaReloj,
         name: 'Vuelta de reloj',
-        positions: [PositionId.abierta, PositionId.cerradaUnaMano],
+        positions: [PositionId.abiertaUnaMano, PositionId.cerradaUnaMano],
         ticks: 4,
         videoFile: 'vuelta-reloj'
     },
     {
         id: StepId.vueltaTrazo,
         name: 'Vuelta de trazo',
-        positions: [{ ending: PositionId.iman, starting: PositionId.abierta }],
+        positions: [{ ending: PositionId.iman, starting: PositionId.abiertaDosManos }],
         ticks: 4,
         videoFile: 'vuelta-trazo'
     }
