@@ -86,7 +86,7 @@ export const steps: Step[] = [
     {
         id: StepId.catapulta,
         name: 'Catapulta',
-        positions: [{ ending: PositionId.cerradaUnaMano, starting: PositionId.brazosCruzados }],
+        positions: [{ ending: PositionId.abiertaUnaMano, starting: PositionId.brazosCruzados }],
         ticks: 4,
         videoFile: 'catapulta'
     },
@@ -201,7 +201,7 @@ export const steps: Step[] = [
     {
         id: StepId.molinillo,
         name: 'Molinillo',
-        positions: [{ ending: PositionId.cerradaUnaMano, starting: PositionId.abiertaDosManos }],
+        positions: [{ ending: PositionId.abiertaUnaMano, starting: PositionId.abiertaDosManos }],
         ticks: 8,
         videoFile: 'molinillo'
     },
@@ -374,7 +374,7 @@ export const steps: Step[] = [
     {
         id: StepId.vueltaFinta,
         name: 'Vuelta con finta',
-        positions: [{ ending: PositionId.cerradaUnaMano, starting: PositionId.abiertaUnaMano }],
+        positions: [{ ending: PositionId.abiertaDosManos, starting: PositionId.abiertaUnaMano }],
         ticks: 4,
         videoFile: 'vuelta-finta'
     },

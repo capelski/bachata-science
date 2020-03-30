@@ -23,10 +23,12 @@ export const positions: Position[] = [
     },
     {
         id: PositionId.cerradaDosManos,
+        imageFile: 'cerrada-dos-manos.jpg',
         name: 'Cerrada con dos manos'
     },
     {
         id: PositionId.cerradaUnaMano,
+        imageFile: 'cerrada-una-mano.jpg',
         name: 'Cerrada con una mano'
     },
     {
@@ -56,6 +58,7 @@ export const positions: Position[] = [
     },
     {
         id: PositionId.manoHombro,
+        imageFile: 'mano-al-hombro.jpg',
         name: 'Mano al hombro'
     },
     {
