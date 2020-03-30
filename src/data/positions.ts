@@ -36,6 +36,7 @@ export const positions: Position[] = [
     },
     {
         id: PositionId.enrosqueCuello,
+        imageFile: 'enrosque-cuello.jpg',
         name: 'Enrosque de cuello'
     },
     {
@@ -45,10 +46,12 @@ export const positions: Position[] = [
     },
     {
         id: PositionId.lancero,
+        imageFile: 'lancero.jpg',
         name: 'Lancero'
     },
     {
         id: PositionId.manoEspaldaFollower,
+        imageFile: 'mano-espalda-follower.jpg',
         name: 'Mano a espalda follower'
     },
     {
@@ -61,10 +64,12 @@ export const positions: Position[] = [
     },
     {
         id: PositionId.s,
+        imageFile: 's.jpg',
         name: 'S'
     },
     {
         id: PositionId.titanic,
+        imageFile: 'titanic.jpg',
         name: 'Titanic'
     }
 ];
