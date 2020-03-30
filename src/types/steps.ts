@@ -30,6 +30,8 @@ export enum StepId {
     parabrisas = 'parabrisas',
     pasoPico = 'paso-pico',
     peinadoFollower = 'peinado-follower',
+    ponerAbrigo = 'poner-abrigo',
+    quitarAbrigo = 'quitar-abrigo',
     salidaManoHombro = 'salida-mano-hombro',
     serpentina = 'serpentina',
     slide = 'slide',

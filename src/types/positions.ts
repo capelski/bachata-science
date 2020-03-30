@@ -13,7 +13,8 @@ export enum PositionId {
     manoHombro = 'mano-hombro',
     manosCintura = 'manos-cintura',
     s = 's',
-    titanic = 'titanic'
+    titanic = 'titanic',
+    cuchara = 'cuchara'
 }
 
 export interface Position {

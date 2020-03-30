@@ -71,6 +71,11 @@ export const positions: Position[] = [
         id: PositionId.titanic,
         imageFile: 'titanic.jpg',
         name: 'Titanic'
+    },
+    {
+        id: PositionId.cuchara,
+        imageFile: 'cuchara.jpg',
+        name: 'Cuchara'
     }
 ];
 

@@ -252,6 +252,20 @@ export const steps: Step[] = [
         videoFile: 'peinado-follower'
     },
     {
+        id: StepId.ponerAbrigo,
+        name: 'Poner abrigo',
+        positions: [{ ending: PositionId.cuchara, starting: PositionId.lancero }],
+        ticks: 4,
+        videoFile: 'poner-abrigo'
+    },
+    {
+        id: StepId.quitarAbrigo,
+        name: 'Quitar abrigo',
+        positions: [{ ending: PositionId.brazosCruzados, starting: PositionId.cuchara }],
+        ticks: 4,
+        videoFile: 'quitar-abrigo'
+    },
+    {
         id: StepId.salidaManoHombro,
         name: 'Salida de mano al hombro',
         positions: [
