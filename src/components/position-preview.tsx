@@ -13,7 +13,7 @@ export const PositionPreview: React.FC<PositionPreviewProps> = props => {
     return (
         <Link
             className="position-preview"
-            to={`/position/${position.id}?$modena=bachata-science`}
+            to={`/position/${position.id}`}
             data-testid={testIds.positionPreview.link}
         >
             {position.name}

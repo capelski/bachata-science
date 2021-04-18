@@ -13,7 +13,7 @@ export const StepPreview: React.FC<StepPreviewProps> = props => {
     return (
         <Link
             className="step-preview"
-            to={`/step/${step.id}?$modena=bachata-science`}
+            to={`/step/${step.id}`}
             data-testid={testIds.stepPreview.link}
         >
             {step.name}

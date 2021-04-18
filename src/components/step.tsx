@@ -49,7 +49,7 @@ export const Step: React.FC<StepProps> = props => {
             {step.videoFile && (
                 <video className="video-resource" controls={true}>
                     <source
-                        src={`/videos/${step.videoFile}.mp4?$modena=bachata-science`}
+                        src={`/bachata-science/videos/${step.videoFile}.mp4`}
                         type="video/mp4"
                     />
                     No se puede reproducir el video en este navegador

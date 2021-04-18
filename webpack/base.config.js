@@ -1,4 +1,6 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -13,14 +15,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [
-                    // Creates `style` nodes from JS strings
-                    'style-loader',
-                    // Translates CSS into CommonJS
-                    'css-loader',
-                    // Compiles Sass to CSS
-                    'sass-loader'
-                ],
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.html$/,
@@ -30,23 +25,25 @@ module.exports = {
                     }
                 ]
             }
-        ]     
+        ]
     },
     output: {
-        filename: 'main.js?$modena=bachata-science',
-        publicPath: '/',
+        filename: '[name].js',
+        path: path.resolve(__dirname, '..', 'docs'),
+        publicPath: '/bachata-science'
     },
     plugins: [
         new HtmlWebpackPlugin({
             filename: './index.html',
-            template: './src/index.html',
-        })
+            template: './src/index.html'
+        }),
+        new CopyWebpackPlugin([
+            {
+                from: 'assets'
+            }
+        ])
     ],
     resolve: {
-        extensions: ['.js', '.ts', '.tsx', '.scss'],
-    },
-    // TODO To be applied only on development mode
-    devServer: {
-      historyApiFallback: true
+        extensions: ['.js', '.ts', '.tsx', '.scss']
     }
 };

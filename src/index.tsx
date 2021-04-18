@@ -29,7 +29,7 @@ function ParametrizedRoute<T>(props: ParametrizedRouteProps<T>) {
 }
 
 const App = () => (
-    <BrowserRouter>
+    <BrowserRouter basename="bachata-science">
         <div>
             <Navbar />
             <div className="container custom-container">

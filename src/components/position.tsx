@@ -23,7 +23,7 @@ export const Position: React.FC<PositionProps> = props => {
             {position.imageFile && (
                 <img
                     className="image-resource"
-                    src={`/images/${position.imageFile}?$modena=bachata-science`}
+                    src={`/bachata-science/images/${position.imageFile}`}
                 />
             )}
 

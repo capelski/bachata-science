@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const Navbar: React.FC = () => (
     <nav className="navbar navbar-expand-md fixed-top custom-navbar bg-primary">
         <div className="container">
-            <Link className="navbar-brand" to="/?$modena=bachata-science">
+            <Link className="navbar-brand" to="/">
                 Bachata Science
             </Link>
             <button
@@ -21,34 +21,22 @@ export const Navbar: React.FC = () => (
             <div className="collapse navbar-collapse" id="navbarResponsive">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item mx-0 mx-md-1">
-                        <Link
-                            className="nav-link py-3 px-0 px-md-3 rounded"
-                            to="/stages?$modena=bachata-science"
-                        >
+                        <Link className="nav-link py-3 px-0 px-md-3 rounded" to="/stages">
                             Fases
                         </Link>
                     </li>
                     <li className="nav-item mx-0 mx-md-1">
-                        <Link
-                            className="nav-link py-3 px-0 px-md-3 rounded"
-                            to="/glossary?$modena=bachata-science"
-                        >
+                        <Link className="nav-link py-3 px-0 px-md-3 rounded" to="/glossary">
                             Glosario
                         </Link>
                     </li>
                     <li className="nav-item mx-0 mx-md-1">
-                        <Link
-                            className="nav-link py-3 px-0 px-md-3 rounded"
-                            to="/positions?$modena=bachata-science"
-                        >
+                        <Link className="nav-link py-3 px-0 px-md-3 rounded" to="/positions">
                             Posiciones
                         </Link>
                     </li>
                     <li className="nav-item mx-0 mx-md-1">
-                        <Link
-                            className="nav-link py-3 px-0 px-md-3 rounded"
-                            to="/steps?$modena=bachata-science"
-                        >
+                        <Link className="nav-link py-3 px-0 px-md-3 rounded" to="/steps">
                             Pasos
                         </Link>
                     </li>

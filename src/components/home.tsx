@@ -9,7 +9,7 @@ export const Home: React.FC = () => (
             que los nombres no te gusten (acepto sugerencias mejores) o que eches de menos tu paso
             preferido (en cuyo caso, envíame un video del paso a <b>capellas.carles@gmail.com</b> y
             lo añadire).Verás que utilizo términos inventados para definir los pasos; tal vez te
-            ayude echar un vistazo al <Link to="/glossary?$modena=bachata-science">glosario</Link>
+            ayude echar un vistazo al <Link to="/glossary">glosario</Link>
         </p>
 
         <p>

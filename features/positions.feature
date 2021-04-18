@@ -9,7 +9,7 @@ Feature: Positions
     Scenario: Position preview contains a link to the position
         Given a position with id "position-id"
         When rendering a position preview component for the position
-        Then the position preview contains a link to "/position/position-id?$modena=bachata-science"
+        Then the position preview contains a link to "/position/position-id"
 
     Scenario: Positions list component renders a position preview for each existing position
         Given the positions defined in "positions.json"

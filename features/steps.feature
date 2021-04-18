@@ -9,7 +9,7 @@ Feature: Steps
     Scenario: Step preview contains a link to the step
         Given a step with id "step-id"
         When rendering a step preview component for the step
-        Then the step preview contains a link to "/step/step-id?$modena=bachata-science"
+        Then the step preview contains a link to "/step/step-id"
 
     Scenario: Steps list component renders a step preview for each existing step
         Given the steps defined in "steps.json"
